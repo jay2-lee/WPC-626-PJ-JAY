@@ -28,7 +28,8 @@ body * {
 }
 /* 상단영역 플렉스 부모박스 */
 .top-area .cont-box{
-    justify-content: space-between;
+    justify-content: space-between;    
+    background-color: rgba(255, 255, 255, 0.616);
 }
 /* 로고박스 */
 .logo-box{    
@@ -66,6 +67,22 @@ body * {
     gap: 2rem;
 }
 /* GNB메뉴 */
+.gnb-menu::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: rgba(255, 255, 255, 0.616);
+    z-index: -1;
+    
+    /* 트랜지션 */
+    transition: .4s ease-out;
+}
+
+.gnb-menu:hover::before{
+    height: 400px;
+}
 .gnb-menu>ul{
     font-size: 1.8rem;
     gap: 3.2rem;
@@ -94,7 +111,7 @@ body * {
     transition: .4s ease-out;
 }
 /* 부모 li에 마우스 오버시 .sub-menu 높이값 변경하기 */
-.gnb-menu>ul>li:hover .sub-menu{
+.gnb-menu:hover>ul>li .sub-menu{
     max-height: 400px;
     /* 최대 높이값을 컨텐츠 높이값 보다 좀 더 크게 잡으면
     오버시 높이값이 내용만큼만 커지게 된다! */
@@ -127,10 +144,23 @@ body * {
 
 /***************** 1.5. 드라마파트메뉴 *****************/
 /***************** 2. 메인영역 *****************/
+
+/* 공통 클래스  */
+.tit{
+    width: calc(100%/3);
+    height: 100vh;
+    line-height: 100vh;
+    background-color: #0000007e;
+    color: #fff;
+    text-align: center;
+    font-size: 6.4rem;
+    font-weight: normal;
+}
+
+
 /***************** 2-1. 배너영역 *****************/
 .banner-part{
-    /* 비율셋팅 : 배너이미지크기 비율임! */
-    aspect-ratio: 1380 / 598;
+    height: 100vh;
 }
 /* 배너박스 */
 .banner-box{
@@ -144,7 +174,7 @@ body * {
     /* 플렉스박스 */
     display: flex;
     /* 슬라이드 개수만큼 크기를 설정해준다! */
-    width: calc(100%*3);
+    width: calc(100%*4);
     /* 배너이미지크기 */
     height: 100%;
 }
@@ -172,7 +202,7 @@ body * {
 .aboutus-part{
     height: 100vh;
     
-    background: url(../images/about_us_bg.png) no-repeat center/cover;
+    background: url(../images/aboutus_bg.png) no-repeat right/cover;
 }
 /***************** 2-4. 미리보기영역 *****************/
 .view-part{

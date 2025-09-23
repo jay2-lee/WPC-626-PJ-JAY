@@ -3,18 +3,10 @@
 /* 공통 셋팅을 위한 클래스 + 웹폰트 */
 
 /* 웹폰트 CDN */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&family=Gugi&family=Nanum+Gothic&family=Single+Day&family=ZCOOL+KuaiLe&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+KR:wght@100..900&display=swap');
 /* 
     0. 메뉴 등 일반체
-    font-family: 'Noto Sans KR', sans-serif;
-    1. 캐릭터 설명 제목체
-    font-family: 'Gugi', cursive;
-    2. 캐릭터 설명 내용체
-    font-family: 'Single Day', cursive;
-    3. 캐릭터 설명 한자체
-    font-family: 'ZCOOL KuaiLe', cursive;
-    4. 전체 공통체(메뉴 등)
-    font-family: 'Nanum Gothic', sans-serif;
+    font-family: "Inter",'Noto Sans KR', sans-serif;
 */
 
 /* 전체 글자크기 */
@@ -24,7 +16,7 @@ html{
 }
 body{
     /* 글자체 */
-    font-family: "Noto Sans KR", Malgun Gothic, dotum, "돋움", Arial, AppleGothic, Sans-serif;
+    font-family: "Inter",'Noto Sans KR', sans-serif;
 }
 
 /********* 공통 클래스 *********/
