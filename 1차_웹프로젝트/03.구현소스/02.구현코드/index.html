@@ -6,6 +6,15 @@
     <title>ERUSAM</title>
     <!-- 메인 CSS -->
     <link rel="stylesheet" href="./css/main.css" />
+    <!-- 제이쿼리 라이브러리 불러오기 
+     제이쿼리를 사용하는 JS파일 위에 불러와야한다! -->
+    <script src="./js/jquery-3.6.3.min.js"></script>
+
+    <!-- 외부JS 제이쿼리버전 - defer필수! -->
+    <script src="./js/jquery-ui.min.js" defer></script>
+
+    <!--  메인 JS -->
+    <script src="./js/main.js" defer></script>
   </head>
   <body>
     <!-- 1. 상단영역 -->
@@ -41,58 +50,63 @@
                     <a href="">회사소개</a>
                     <!-- 서브메뉴박스 -->
                     <article class="sub-menu">
-                      <ul>
-                        <li><a href="#">회사개요</a></li>
-                        <li><a href="#">인사말</a></li>
-                        <li><a href="#">연혁</a></li>
-                        <li><a href="#">사업장소개</a></li>
-                      </ul>
+                      <div class="padding-box">
+                        <ul>
+                          <li><a href="#">회사개요</a></li>
+                          <li><a href="#">인사말</a></li>
+                          <li><a href="#">연혁</a></li>
+                          <li><a href="#">사업장소개</a></li>
+                        </ul>
+                      </div>
                     </article>
                   </li>
                   <li>
                     <a href="">PET RESIN(Huvis)</a>
                     <!-- 서브메뉴박스 -->
                     <article class="sub-menu">
-                      <ul>
-                        <li><a href="#">서브야</a></li>
-                        <li><a href="#">서브야</a></li>
-                        <li><a href="#">서브야</a></li>
-                        <li><a href="#">서브야</a></li>
-                        <li><a href="#">서브야</a></li>
-                        <li><a href="#">서브야</a></li>
-                        <li><a href="#">서브야</a></li>
-                      </ul>
+                      <div class="padding-box">
+                        <ul>
+                          <li><a href="#">PET JBB305(고상 Chip) </a></li>
+                          <li><a href="#">PET JSB194(액상 Chip) </a></li>
+                        </ul>
+                      </div>
                     </article>
                   </li>
                   <li>
                     <a href="">RECYLED원료</a>
                     <!-- 서브메뉴박스 -->
                     <article class="sub-menu">
-                      <ul>
-                        <li><a href="#">RECYCLED원료</a></li>
-                      </ul>
+                      <div class="padding-box">
+                        <ul>
+                          <li><a href="#">RECYCLED원료</a></li>
+                        </ul>
+                      </div>
                     </article>
                   </li>
                   <li>
                     <a href="">신소재</a>
                     <!-- 서브메뉴박스 -->
                     <article class="sub-menu">
-                      <ul>
-                        <li><a href="#">항균제</a></li>
-                        <li><a href="#">DURASIL</a></li>
-                        <li><a href="#">식미개선제_밥맛향상제</a></li>
-                        <li><a href="#">세탁내구성 향상가공제</a></li>
-                        <li><a href="#">ERS TEX</a></li>
-                      </ul>
+                      <div class="padding-box">
+                        <ul>
+                          <li><a href="#">항균제</a></li>
+                          <li><a href="#">DURASIL</a></li>
+                          <li><a href="#">식미개선제_밥맛향상제</a></li>
+                          <li><a href="#">세탁내구성 향상가공제</a></li>
+                          <li><a href="#">ERS TEX</a></li>
+                        </ul>
+                      </div>
                     </article>
                   </li>
                   <li>
                     <a href="">고객센터</a>
                     <!-- 서브메뉴박스 -->
                     <article class="sub-menu">
-                      <ul>
-                        <li><a href="#">고객센터</a></li>
-                      </ul>
+                      <div class="padding-box">
+                        <ul>
+                          <li><a href="#">고객센터</a></li>
+                        </ul>
+                      </div>
                     </article>
                     
                   </li>
@@ -142,6 +156,18 @@
                 /></a>
               </li>
             </ul>
+
+            
+            <!--이동버튼-->
+            <a href="#" class="abtn ab1">
+              <img src="./images/banner/etc/left_btn.png" alt="왼쪽이동버튼" />
+            </a>
+            <a href="#" class="abtn ab2">
+              <img
+                src="./images/banner/etc/right_btn.png"
+                alt="오른쪽이동버튼"
+              />
+            </a>
           </div>
         </section>
 
