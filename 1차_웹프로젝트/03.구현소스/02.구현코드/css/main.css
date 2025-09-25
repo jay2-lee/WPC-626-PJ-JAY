@@ -97,7 +97,7 @@ body * {
 .sub-menu {
     position: absolute;
     left: 0;
-    width: 100%;
+    width: 313%;
     box-sizing: border-box;
     background-color: #fff;
     /* 서브메뉴를 숨기기위해 넘치는 자식 숨기기설정 */
