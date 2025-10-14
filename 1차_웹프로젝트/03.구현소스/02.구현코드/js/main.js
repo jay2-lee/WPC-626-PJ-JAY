@@ -49,3 +49,21 @@ setInterval(()=>{
     // 오른쪽 버튼 클릭 강제발생
     $rbtn.click();
 }, 5000); // 3초간격
+
+
+
+// Product 구역 클릭시 /////////
+
+// 변경대상: .icon-box
+const $iconBox = $('.icon-box ul');
+
+$('.btn-grp button').click(function(){
+    if($(this).is('.btn-up')){
+        console.log('위');
+        $iconBox.prepend($iconBox.find('li').last());
+    } else {
+        console.log('아래');
+        $iconBox.append($iconBox.find('li').first());
+    }
+
+}); ////////// click //////////
