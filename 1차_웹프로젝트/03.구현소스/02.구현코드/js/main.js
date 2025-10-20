@@ -21,7 +21,7 @@ $rbtn.click(()=>{
     // 슬라이드 순번 전역변수 1증가
     seq++;
     // 2가 한계이므로 처리
-    if(seq>2) seq=0;    
+    if(seq>3) seq=0;    
     
     // 슬라이드의 translate값을 변경함!
     $slide.css({

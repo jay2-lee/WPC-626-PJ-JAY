@@ -239,7 +239,7 @@
 }
 .icon-box li{
     position: absolute;
-    top: 0;
+    top: -15%;
     left: 0;
     width: 100%;
     aspect-ratio: .9;
@@ -253,11 +253,12 @@
 .icon-box li:nth-child(1){
     translate: 0 -300%;
     scale: .3;
-    opacity: 0;
+    opacity: 0%;
 }
 .icon-box li:nth-child(2){
     translate: 0 -100%;
     scale: .6;
+    opacity: 0%;
 }
 .icon-box li:nth-child(3){
     translate: 0% 0%;
@@ -265,6 +266,7 @@
 .icon-box li:nth-child(4){
     translate: 0 100%;
     scale: .6;
+    opacity: 0%;
 }
 /* 4번li 이후의 모든 li 디자인 */
 .icon-box li:nth-child(4)~li{
@@ -276,7 +278,7 @@
 .icon-box li.ex img{
     top: 35%;
     height: auto;
-    width: 70%;
+    width: 50%;
 }
 .icon-box img{
     position: absolute;
@@ -349,7 +351,7 @@
 }
 
 .icon-box li:nth-child(3) img{
-    top: 45%;
+    top: 40%;
 }
 
 .icon-box li:nth-child(3) h2{
