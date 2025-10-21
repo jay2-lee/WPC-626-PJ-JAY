@@ -170,6 +170,9 @@
 }
 /* 배너박스 */
 .banner-box{
+    position: relative;
+    /* 부모자격 */
+
     /* 배너이미지크기 */
     height: 100%;
     /* 넘치는 배너 숨기기 */
@@ -186,6 +189,8 @@
 }
 /* 배너 슬라이드 li */
 .banner-slide li{
+    position: relative;
+    /* 부모자격 */
     /* 늘어나게 설정 */
     flex-shrink: 0;
     width: 100%;
@@ -201,13 +206,39 @@
 
 }
 
+/* 배너타이틀 */
+.banner-slide h2{
+    position: absolute;
+    bottom: 15vh;
+    left: 5vw;
+    font-size: 30px;
+    color: #fff;
+    text-shadow: 2px 2px 2px #666;
+    font-weight: 100;
+}
+.banner-slide h2 b {
+    font-size: 50px;
+}
 
+/* 이동버튼 그룹 */
+.abtn-grp{
+    position: absolute;
+    bottom: 5vh;
+    width: 30vw;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    /* outline: 1px solid red; */
+}
 /*이동버튼*/
 .abtn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   /*Y축 중앙이동*/
+}
+.abtn img{
+    width: 20px;
 }
 
 /*왼쪽버튼*/
@@ -366,9 +397,39 @@
     
 /***************** 2-3. About Us 영역 *****************/
 .aboutus-part{
+    position: relative;
+    /* 부모자격 */
     height: 100vh;
     
     background: url(../images/aboutus.png) no-repeat right/cover;
+}
+.icon-box{
+    position: absolute;
+    top: 50%;
+    right: 20vw;
+    translate: 0 -50%;
+    width: 152px;
+    height: 142px;
+    outline: 1px dashed red;
+}
+.icon-box img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.icon-box a:nth-child(1) img{
+    translate: 0 -20vmin;
+}
+.icon-box a:nth-child(2) img{
+    translate: 15vmin 0;
+}
+.icon-box a:nth-child(3) img{
+    translate: 0 20vmin;
+}
+.icon-box a:nth-child(4) img{
+    translate: -15vmin 0;
 }
 /***************** 2-4. 미리보기영역 *****************/
 .view-part{
@@ -387,9 +448,14 @@
     height: 409px;
 }
 /***************** 3. 하단영역 *****************/
-.bottom-area{
-    
+.bottom-area{    
     position: relative;
-    height: 100vh;
+}
+.question{
+    height: 50vh;
     background: url(../images/question.png) no-repeat center/cover;
+}
+.bottom-info{
+    height: 20vh;
+    background-color: #000;
 }
