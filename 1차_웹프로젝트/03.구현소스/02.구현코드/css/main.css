@@ -368,7 +368,7 @@
 .aboutus-part{
     height: 100vh;
     
-    background: url(../images/aboutus_bg.png) no-repeat right/cover;
+    background: url(../images/aboutus.png) no-repeat right/cover;
 }
 /***************** 2-4. 미리보기영역 *****************/
 .view-part{
@@ -388,5 +388,8 @@
 }
 /***************** 3. 하단영역 *****************/
 .bottom-area{
-    height: 391px;
+    
+    position: relative;
+    height: 100vh;
+    background: url(../images/question.png) no-repeat center/cover;
 }
