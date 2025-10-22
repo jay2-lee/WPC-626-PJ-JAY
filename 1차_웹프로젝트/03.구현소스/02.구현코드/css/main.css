@@ -195,6 +195,7 @@
     flex-shrink: 0;
     width: 100%;
 }
+
 /* 배너이미지 */
 .banner-slide img{
     width: 100%;
@@ -359,7 +360,7 @@
     bottom: 0px;
     width: 100%;
     text-align: center;
-    font-size: 1.5vw;
+    font-size: 1.0vw;
     color: #fff;
     text-shadow: 2px 2px 2px #666;
     opacity: 0;
@@ -373,7 +374,7 @@
     bottom: 0px;
     width: 100%;
     text-align: center;
-    font-size: 1.2vw;
+    font-size: 0.8vw;
     color: #fff;
     text-shadow: 2px 2px 2px #666;
     opacity: 0;
@@ -414,10 +415,10 @@
 }
 .icon-box img{
     position: absolute;
-    top: 0;
-    left: 217px;
-    width: 48%;
-    height: 43%;
+    top: -25px;
+    left: -350px;
+    width: 150%;
+    height: 130%;
 }
 .icon-box a:nth-child(1) img{
     translate: 0 -20vmin;
@@ -457,5 +458,5 @@
 }
 .bottom-info{
     height: 20vh;
-    background-color: #000;
+    background: url(../images/bottom.png) no-repeat center/cover;
 }
