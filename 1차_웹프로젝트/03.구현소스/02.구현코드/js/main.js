@@ -162,6 +162,9 @@ function slideAuto() {
 
     // (2) 블릿 li클래스 on넣기(나머지는 빼기)
     $indic.eq(currIdx).addClass("on").siblings().removeClass("on");
+
+    // (3) 슬라이드 효과를 위해 li클래스 on넣기(나머지는 빼기)
+    $slide.find("li").eq(1).addClass("on").siblings().removeClass("on");
   }, IV_TIME);
 } ////// slideAuto 함수 //////
 

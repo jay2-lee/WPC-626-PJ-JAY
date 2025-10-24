@@ -124,13 +124,12 @@
           </section>
           <!-- 1-3. 박스 -->
           <section class="etc-box">
-            <div class="search-box">
-              <a href="#"><img src="./images/banner/mirroricon.png" alt="검색" /></a>
-            </div>
-            <section class="etc-box">
-            <div class="search-box">
-              <a href="#"><img src="./images/banner/global.png" alt="검색" /></a>
-            </div>
+            <a href="#" class="search-box"
+              ><img src="./images/banner/mirroricon.png" alt="검색"
+            /></a>
+            <a href="#" class="search-box"
+              ><img src="./images/banner/global.png" alt="검색"
+            /></a>
           </section>
         </div>
       </header>
@@ -151,7 +150,7 @@
           <div class="banner-box">
             <!-- 배너 슬라이드 박스 : ul>li구조 -->
             <ul class="banner-slide">
-              <li>
+              <li class="on">
                 <a href="#"
                   ><img src="./images/banner/ban05.png" alt="배너이미지1" />
                   <h2>
@@ -266,14 +265,15 @@
                 </div>
               </li>
             </ul>
-            <div class="btn-grp">
-              <button class="btn-up">
-                <i class="fa-solid fa-chevron-up"></i>
-              </button>
-              <button class="btn-down">
-                <i class="fa-solid fa-chevron-down"></i>
-              </button>
-            </div>
+          </div>
+          <!-- 바깥박스가 부모 : 버튼그룹 -->
+          <div class="btn-grp">
+            <button class="btn-up">
+              <i class="fa-solid fa-chevron-up"></i>
+            </button>
+            <button class="btn-down">
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
           </div>
         </section>
 
@@ -299,23 +299,18 @@
     </div>
     <!-- 3. 하단영역 -->
     <div id="bottom-area">
-    <footer class="bottom-area inbox">
+      <footer class="bottom-area inbox">
         <h2 class="temp-tit blind">3. 하단영역</h2>
 
         <!-- 질문답변 -->
         <section class="question inbox">
-           <a class="btn-question" href="#">
-              <img src="./images/Vector.png" alt="about us" />
-            </a>
-          </div>
+          <a class="btn-question" href="#">
+            <img src="./images/Vector.png" alt="about us" />
+          </a>
         </section>
-      </main>
-    </div>
         <!-- 하단정보 -->
         <section class="bottom-info inbox"></section>
       </footer>
     </div>
   </body>
 </html>
-
-  
