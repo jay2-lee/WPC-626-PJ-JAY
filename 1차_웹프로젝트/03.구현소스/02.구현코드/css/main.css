@@ -43,6 +43,7 @@
 .etc-box{
     flex: 1;
     width: 126px;
+    
 }
 
 /* 메뉴박스 */
@@ -210,25 +211,26 @@
 /* 배너타이틀 */
 .banner-slide h2{
     position: absolute;
-    bottom: 15vh;
-    left: 5vw;
-    font-size: 30px;
+    bottom: 18vh;
+    left: 10vw;
+    font-size: 50px;
     color: #fff;
     text-shadow: 2px 2px 2px #666;
     font-weight: 100;
 }
 .banner-slide h2 b {
-    font-size: 50px;
+    font-size: 60px;
 }
 
 /* 이동버튼 그룹 */
 .abtn-grp{
     position: absolute;
-    bottom: 5vh;
-    width: 30vw;
-    height: 10vh;
+    bottom: 11vh;
+    width: 11vw;
+    height: 9vh;
     display: flex;
     justify-content: space-between;
+    left: 8%;
     /* outline: 1px solid red; */
 }
 /*이동버튼*/
@@ -420,9 +422,9 @@
 .icon-box img{
     position: absolute;
     top: -25px;
-    left: -350px;
-    width: 150%;
-    height: 130%;
+    left: -324px;
+    width: 157%;
+    height: 157%;
 }
 .icon-box a:nth-child(1) img{
     translate: 0 -20vmin;
@@ -455,17 +457,24 @@
 /***************** 3. 하단영역 *****************/
 .bottom-area{    
     position: relative;
+    
 }
 .question{
     height: 60vh;
     background: url(../images/question.png) no-repeat center/cover;
 }
-.btn-question{
+.bottom-area{
+    height: 53vh;
+    background: url(../images/Vector.png) no-repeat center/cover;
+}
+.btn-question img{
     position: absolute;
-    bottom: 10%;
+    bottom: 0%;
     left: 50%;
     translate: -50%;
-}
+    width: 350px;
+    height: 130px;
+}    
 .btn-question
 .bottom-info{
     height: 20vh;
