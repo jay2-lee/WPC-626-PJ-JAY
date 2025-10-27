@@ -24,6 +24,9 @@
 
     <!--  메인 JS -->
     <script src="./js/main.js" defer></script>
+
+    <!-- 외부JS 연결 -->
+    <script src="./js/auto_scroll.js" type="module"></script>
   </head>
   <body>
     <!-- 1. 상단영역 -->
@@ -144,7 +147,7 @@
     <div id="main-area">
       <main class="main-area">
         <!-- 2-1. 배너영역 -->
-        <section class="banner-part">
+        <section class="page banner-part">
           <h2 class="temp-tit blind">2-1. 배너영역</h2>
           <!-- 배너박스 -->
           <div class="banner-box">
@@ -207,7 +210,7 @@
         </section>
 
         <!-- 2-2. Product영역 -->
-        <section class="product-part inbox">
+        <section class="page product-part inbox">
           <h2 class="tit">Product</h2>
           <div class="icon-box">
             <ul>
@@ -278,38 +281,76 @@
         </section>
 
         <!-- 2-3. About us영역 -->
-        <section class="aboutus-part inbox">
+        <section class="page aboutus-part inbox">
           <h2 class="tit">About us</h2>
-          <div class="icon-box">
-            <a href="#">
-              <img src="./images/aboutus1.png" alt="about us" />
-            </a>
-            <a href="#">
-              <img src="./images/aboutus2.png" alt="about us" />
-            </a>
-            <a href="#">
-              <img src="./images/aboutus3.png" alt="about us" />
-            </a>
-            <a href="#">
-              <img src="./images/aboutus4.png" alt="about us" />
-            </a>
-          </div>
+          <ul class="icon-box">
+            <li>
+              <a href="#">
+                <img src="./images/aboutus1.png" alt="about us" />
+                <h4>여기글자요</h4>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="./images/aboutus2.png" alt="about us" />
+                <h4>여기글자요</h4>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="./images/aboutus3.png" alt="about us" />
+                <h4>여기글자요</h4>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="./images/aboutus4.png" alt="about us" />
+                <h4>여기글자요</h4>
+              </a>
+            </li>
+          </ul>
         </section>
       </main>
     </div>
     <!-- 3. 하단영역 -->
     <div id="bottom-area">
-      <footer class="bottom-area inbox">
+      <footer class="page bottom-area inbox">
         <h2 class="temp-tit blind">3. 하단영역</h2>
 
         <!-- 질문답변 -->
         <section class="question inbox">
-          <a class="btn-question" href="#">
-            <img src="./images/Vector.png" alt="about us" />
-          </a>
+          <h2>망설이지 마세요!</h2>
+          <h3>언제든지 편안하게 문의하고 <br> 친절한 도움을 받으실 수 있습니다.</h3>
+          <a class="btn-question" href="#">상세보기<i class="fa-solid fa-arrow-right"></i></a>
         </section>
         <!-- 하단정보 -->
-        <section class="bottom-info inbox"></section>
+        <section class="bottom-info inbox">
+          <div class="link-bar">
+            <ul>
+              <li>
+                <a href="#">메인화면</a>
+              </li>
+              <li>
+                <a href="#">개인정보처리방침</a>
+              </li>
+              <li>
+                <a href="#">서비스이용약관</a>
+              </li>
+              <li>
+                <a href="#">admin</a>
+              </li>
+            </ul>
+          </div>
+          <div class="company-info">
+            <h3>(주)이루삼</h3>
+            <address>
+              대표 : 이동수|사업자등록번호 : 110-86-00510 <br>
+              주소 : 서울특별시 마포구 망원동7길 65 (2층,망원동)|TEL : 02-356-1118  <br>
+            COPYRIGHT(C) (주)이루삼. ALL RIGHTS RESERVED.
+            </address>          
+            
+          </div>
+        </section>
       </footer>
     </div>
   </body>

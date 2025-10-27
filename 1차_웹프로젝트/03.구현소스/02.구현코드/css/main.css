@@ -273,7 +273,7 @@
     background: url(../images/product_bg.png) no-repeat center/cover;
 }
 
-.icon-box{
+.product-part .icon-box{
     position: absolute;
     top: 50%;
     translate: 0 -50%;
@@ -282,7 +282,7 @@
     aspect-ratio: 1.2;
     /* outline: 1px solid red; */
 }
-.icon-box li{
+.product-part .icon-box li{
     position: absolute;
     top: -107%;
     left: -140px;
@@ -295,37 +295,37 @@
     box-sizing: border-box;
     transition: .4s ease-in-out;
 }
-.icon-box li:nth-child(1){
+.product-part .icon-box li:nth-child(1){
     translate: 0 -300%;
     scale: .3;
     opacity: 0%;
 }
-.icon-box li:nth-child(2){
+.product-part .icon-box li:nth-child(2){
     translate: 0 -100%;
     scale: .6;
     opacity: 0%;
 }
-.icon-box li:nth-child(3){
+.product-part .icon-box li:nth-child(3){
     translate: 0% 0%;
 }
-.icon-box li:nth-child(4){
+.product-part .icon-box li:nth-child(4){
     translate: 0 100%;
     scale: .6;
     opacity: 0%;
 }
 /* 4번li 이후의 모든 li 디자인 */
-.icon-box li:nth-child(4)~li{
+.product-part .icon-box li:nth-child(4)~li{
     translate: 0 300%;
     scale: .3;
     opacity: 0;
 }
 /* 4번li 이후의 모든 li 이미지 예외 디자인 */
-.icon-box li.ex img{
+.product-part .icon-box li.ex img{
     top: 35%;
     height: auto;
     width: 50%;
 }
-.icon-box img{
+.product-part .icon-box img{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -368,7 +368,7 @@
 
 
 /* 아이콘 타이틀 */
-.icon-box li h2{
+.product-part .icon-box li h2{
     position: absolute;
     bottom: 0px;
     width: 100%;
@@ -382,7 +382,7 @@
     transition: .8s .5s;
 }
 /* 아이콘 타이틀 설명 */
-.icon-box li h3{
+.product-part .icon-box li h3{
     position: absolute;
     bottom: 0px;
     width: 100%;
@@ -395,7 +395,7 @@
     transition: .8s .8s;
 }
 
-.icon-box li:nth-child(3) img{
+.product-part .icon-box li:nth-child(3) img{
     top: 45%;
     left: 50%;
     translate: -50% -50%;
@@ -403,11 +403,11 @@
     height: auto;
 }
 
-.icon-box li:nth-child(3) h2{
+.product-part .icon-box li:nth-child(3) h2{
     bottom: 50%;
     opacity: 1;
 }
-.icon-box li:nth-child(3) h3{
+.product-part .icon-box li:nth-child(3) h3{
     bottom: 10%;
     opacity: 1;
 }
@@ -430,24 +430,36 @@
     height: 142px;
     outline: 1px dashed red;
 }
-.aboutus-part .icon-box img{
+.aboutus-part .icon-box li{
     position: absolute;
     top: -25px;
-    left: -324px;
-    width: 157%;
-    height: 157%;
+    width: 100%;
+    height: 100%;
 }
-.aboutus-part .icon-box a:nth-child(1) img{
+.aboutus-part .icon-box li img{
+    width: 100%;
+    height: 100%;
+
+}
+.aboutus-part .icon-box li:nth-child(1) {
     translate: 0 -20vmin;
 }
-.aboutus-part .icon-box a:nth-child(2) img{
+.aboutus-part .icon-box li:nth-child(2) {
     translate: 15vmin 0;
 }
-.aboutus-part .icon-box a:nth-child(3) img{
+.aboutus-part .icon-box li:nth-child(3) {
     translate: 0 20vmin;
 }
-.aboutus-part .icon-box a:nth-child(4) img{
+.aboutus-part .icon-box li:nth-child(4) {
     translate: -15vmin 0;
+}
+
+/* About us 아이콘박스 글자 */
+.aboutus-part .icon-box li h4{
+    text-align: center;
+    font-size: 1.5rem;
+    color: #000;
+    text-shadow: 2px 2px 2px #fff;
 }
 /***************** 2-4. 미리보기영역 *****************/
 .view-part{
@@ -471,23 +483,59 @@
     
 }
 .question{
-    height: 60vh;
-    background: url(../images/question.png) no-repeat center/cover;
+    padding: 10vh;
+    text-align: center;
 }
-.bottom-area{
-    height: 53vh;
-    background: url(../images/Vector.png) no-repeat center/cover;
+.question h2{
+    font-size: 5vh;
+    margin-bottom: 2vh;
 }
-.btn-question img{
-    position: absolute;
-    bottom: 0%;
-    left: 50%;
-    translate: -50%;
+.question h3{
+    font-size: 4vh;
+}
+.btn-question{
+    display: block;
+    margin: 5vh auto;
+    font-size: 3vh;
     width: 350px;
     height: 130px;
-}    
-.btn-question
+    border-radius: 70px;
+    background-color: #555;
+    color: #fff;
+    line-height: 130px;
+}   
+/* 최하단 파트 */ 
 .bottom-info{
     height: 20vh;
-    background: url(../images/bottom.png) no-repeat center/cover;
+    background-color: #000;
+    color: #fff;
+}
+
+/* 하단링크 */
+.link-bar ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 0;
+}
+.link-bar a{
+    font-size: 1.4rem;
+    color: #ccc;
+}
+/* a링크 오버시 빨간색 글자 */
+.link-bar a:hover{
+    color: red;
+}
+.company-info{
+    display: flex;
+    align-items: center;
+}
+.company-info h3{
+    font-size: 40px;
+    padding: 5vh;
+}
+.company-info address{
+    flex: 1;
+    font-size: 1.2rem;
+    line-height: 2;
 }
