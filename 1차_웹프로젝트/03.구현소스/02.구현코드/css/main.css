@@ -391,7 +391,7 @@
     bottom: 0px;
     width: 100%;
     text-align: center;
-    font-size: 2vw;
+    font-size: 1.5vw;
     color: #fff;
     text-shadow: 2px 2px 2px #666;
     opacity: 0;
@@ -423,7 +423,7 @@
     /* 부모자격 */
     height: 100vh;
     
-    background: url(../images/aboutus.png) no-repeat right/cover;
+    background: url(../images/aboutus5.png) no-repeat right/cover;
 }
 .aboutus-part .icon-box{
     position: absolute;
