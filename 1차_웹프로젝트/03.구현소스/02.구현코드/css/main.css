@@ -24,9 +24,6 @@
     z-index: 9999;
     border-bottom: 1px solid #ccc;
 } 
-.top-area{
-    height: 93px;
-}
 /* 상단영역 플렉스 부모박스 */
 .top-area .cont-box{
     justify-content: space-between;    
@@ -153,6 +150,12 @@
 
     /* 글자크기 */
     font-size: 1.6rem;
+}
+
+/* 모바일 메뉴 버튼 */
+.mob-menu-btn {
+    font-size: 30px;
+    display: none;
 }
 
 /***************** 1.5. 드라마파트메뉴 *****************/
@@ -285,7 +288,8 @@
 .product-part .icon-box li{
    position: absolute;
     top: -71%;
-    left: -140px;
+    left: 50%;
+    translate: -50% 0;
     width: 180%;
     aspect-ratio: .9;
     background-color: rgba(6, 77, 120, 0.39);
@@ -296,26 +300,26 @@
     transition: .4s 
 }
 .product-part .icon-box li:nth-child(1){
-    translate: 0 -300%;
+    translate: -50% -300%;
     scale: .3;
     opacity: 0%;
 }
 .product-part .icon-box li:nth-child(2){
-    translate: 0 -100%;
+    translate: -50% -100%;
     scale: .6;
     opacity: 0%;
 }
 .product-part .icon-box li:nth-child(3){
-    translate: 0% 0%;
+    translate: -50% 0%;
 }
 .product-part .icon-box li:nth-child(4){
-    translate: 0 100%;
+    translate: -50% 100%;
     scale: .6;
     opacity: 0%;
 }
 /* 4번li 이후의 모든 li 디자인 */
 .product-part .icon-box li:nth-child(4)~li{
-    translate: 0 300%;
+    translate: -50% 300%;
     scale: .3;
     opacity: 0;
 }
@@ -343,7 +347,7 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    outline: 1px solid red
+    /* outline: 1px solid red */
 }
 /* Product 위아래 이동버튼 */
 .btn-grp button{
@@ -428,7 +432,7 @@
     translate: 0 -50%;
     width: 160px;
     height: 160px;
-    outline: 1px dashed red;
+    /* outline: 1px dashed red; */
 }
 .aboutus-part .icon-box li{
     position: absolute;
