@@ -12,6 +12,18 @@
   /* 모바일 버튼 보이기 */
   .mob-menu-btn {
     display: block;
+    z-index: 999;
+  }
+  /* 처음엔 x버튼 i요소 숨기기 */
+  .mob-menu-btn i:nth-child(2) {
+    display: none;
+  }
+  /* on들어가면 x버튼으로 변경 */
+  .mob-menu-btn.on i:nth-child(1) {
+    display: none;
+  }
+  .mob-menu-btn.on i:nth-child(2) {
+    display: block;
   }
   /* 타이틀 공통 변경 */
   .tit {
@@ -34,6 +46,61 @@
 
   .btn-grp {
     translate: 0 0;
+  }
+
+  /* 서브메뉴 변경 */
+  .menu-group .gnb-menu {
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+    display: block;
+    transition: .4s ease-in-out;
+  }
+  .menu-group.on .gnb-menu {
+    left: 0%;
+  }
+
+  .gnb-menu > ul {
+    flex-direction: column;
+    /* justify-content: center; */
+    height: 100%;
+    font-size: 4vh;
+    padding: 5vw;
+    box-sizing: border-box;
+  }
+
+  .sub-menu {
+    position: static;
+    translate: none;
+    height: auto;
+    max-height: 0;
+  }
+
+  .padding-box {
+    margin-top: 0;
+  }
+
+  .sub-menu ul {
+    font-size: 2.5vh;
+    line-height: 1.7;
+  }
+
+  .gnb-menu:hover > ul > li .sub-menu {
+    width: auto;
+    height: auto;
+    text-align: left;
+  }
+
+  .gnb-menu > ul > li:hover .sub-menu {
+    max-height: 200px;
+  }
+
+  .gnb-menu > ul > li .sub-menu {
+    max-height: 0;
+    height: auto;
   }
 }
 /* 1200px 이하 미디어쿼리 종료 */
