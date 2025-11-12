@@ -23,8 +23,3 @@ $('.btn-grp button').click(function(){
     }
 
 }); ////////// click //////////
-
-$('.mob-menu-btn').click(function(){
-  $(this).toggleClass('on');
-  $('.menu-group').toggleClass('on');
-})
