@@ -24,131 +24,16 @@
     <!-- 외부JS 제이쿼리버전 - defer필수! -->
     <script src="./js/jquery-ui.min.js" defer></script>
 
-    <!--  메인 JS -->
-    <script src="./js/main.js" defer></script>
+    <!-- 공통 JS -->
+    <script src="./js/common.js" type="module"></script>
 
-    <!-- 외부JS 연결 -->
-    <script src="./js/auto_scroll.js" type="module"></script>
+    <!--  메인 JS -->
+    <script src="./js/main.js" type="module"></script>
+
   </head>
   <body>
-    <!-- 1. 상단영역 -->
-    <div id="top-area">
-      <header class="top-area inbox">
-        <h2 class="temp-tit blind">1. 상단영역</h2>
-        <!-- 상단영역 플렉스부모박스 : .cont-box -->
-        <div class="cont-box">
-          <!-- 1-1. 로고박스 -->
-          <section class="logo-box">
-            <h1 class="logo">
-              <a href="#">
-                <img src="./images/erusam_logo.png" alt="로고" />
-              </a>
-            </h1>
-          </section>
-          <!-- 1-2. 메뉴박스 -->
-          <section class="menu-box">
-            <!-- 메뉴박스하위 메뉴그룹박스 -->
-            <div class="menu-group">
-              <!-- 1-2-1. 탑메뉴 -->
-              <!-- <nav class="top-menu">
-                <ul>
-                  <li><a href="">로그인</a></li>
-                  <li><a href="">회원가입</a></li>
-                  <li><a href="">검색</a></li>
-                </ul>
-              </nav> -->
-              <!-- 1-2-2. GNB메뉴 -->
-              <nav class="gnb-menu">
-                <ul>
-                  <li>
-                    <a href="">회사소개</a>
-                    <!-- 서브메뉴박스 -->
-                    <article class="sub-menu">
-                      <div class="padding-box">
-                        <ul>
-                          <li><a href="#">회사개요</a></li>
-                          <li><a href="#">인사말</a></li>
-                          <li><a href="#">연혁</a></li>
-                          <li><a href="#">사업장소개</a></li>
-                        </ul>
-                      </div>
-                    </article>
-                  </li>
-                  <li>
-                    <a href="">PET RESIN(Huvis)</a>
-                    <!-- 서브메뉴박스 -->
-                    <article class="sub-menu">
-                      <div class="padding-box">
-                        <ul>
-                          <li><a href="#">PET JBB305(고상 Chip) </a></li>
-                          <li><a href="#">PET JSB194(액상 Chip) </a></li>
-                        </ul>
-                      </div>
-                    </article>
-                  </li>
-                  <li>
-                    <a href="">RECYLED원료</a>
-                    <!-- 서브메뉴박스 -->
-                    <article class="sub-menu">
-                      <div class="padding-box">
-                        <ul>
-                          <li><a href="#">RECYCLED원료</a></li>
-                        </ul>
-                      </div>
-                    </article>
-                  </li>
-                  <li>
-                    <a href="">신소재</a>
-                    <!-- 서브메뉴박스 -->
-                    <article class="sub-menu">
-                      <div class="padding-box">
-                        <ul>
-                          <li><a href="#">항균제</a></li>
-                          <li><a href="#">DURASIL</a></li>
-                          <li><a href="#">식미개선제_밥맛향상제</a></li>
-                          <li><a href="#">세탁내구성 향상가공제</a></li>
-                          <li><a href="#">ERS TEX</a></li>
-                        </ul>
-                      </div>
-                    </article>
-                  </li>
-                  <li>
-                    <a href="">고객센터</a>
-                    <!-- 서브메뉴박스 -->
-                    <article class="sub-menu">
-                      <div class="padding-box">
-                        <ul>
-                          <li><a href="#">고객센터</a></li>
-                        </ul>
-                      </div>
-                    </article>
-                  </li>
-                </ul>
-              </nav>
-            </div>
-          </section>
-          <!-- 1-3. 박스 -->
-          <section class="etc-box">
-            <a href="#" class="search-btn"
-              ><img src="./images/banner/mirroricon.png" alt="검색"
-            /></a>
-            <a href="#" class="lang-btn"
-              ><img src="./images/banner/global.png" alt="검색"
-            /></a>
-            <a href="#" class="mob-menu-btn"
-              >
-              <i class="fa-solid fa-bars"></i>
-              <i class="fa-solid fa-close"></i>
-            </a>
-          </section>
-        </div>
-      </header>
-    </div>
-
-    <!-- 1.5. 드라마파트메뉴 -->
-    <div id="drama-part-menu">
-      <nav class="drama-part-menu inbox"></nav>
-    </div>
+    <!-- 1. 상단영역  -->
+    <div id="top-area"></div>
 
     <!-- 2. 메인영역 -->
     <div id="main-area">
@@ -320,45 +205,6 @@
       </main>
     </div>
     <!-- 3. 하단영역 -->
-    <div id="bottom-area">
-      <footer class="page bottom-area inbox">
-        <h2 class="temp-tit blind">3. 하단영역</h2>
-
-        <!-- 질문답변 -->
-        <section class="question inbox">
-          <h2>망설이지 마세요!</h2>
-          <h3>언제든지 편안하게 문의하고 <br> 친절한 도움을 받으실 수 있습니다.</h3>
-          <a class="btn-question" href="#">상세보기<i class="fa-solid fa-arrow-right"></i></a>
-        </section>
-        <!-- 하단정보 -->
-        <section class="bottom-info inbox">
-          <div class="link-bar">
-            <ul>
-              <li>
-                <a href="#">메인화면</a>
-              </li>
-              <li>
-                <a href="#">개인정보처리방침</a>
-              </li>
-              <li>
-                <a href="#">서비스이용약관</a>
-              </li>
-              <li>
-                <a href="#">admin</a>
-              </li>
-            </ul>
-          </div>
-          <div class="company-info">
-            <h3>(주)이루삼</h3>
-            <address>
-              대표 : 이동수|사업자등록번호 : 110-86-00510 <br>
-              주소 : 서울특별시 마포구 망원동7길 65 (2층,망원동)|TEL : 02-356-1118  <br>
-            COPYRIGHT(C) (주)이루삼. ALL RIGHTS RESERVED.
-            </address>          
-            
-          </div>
-        </section>
-      </footer>
-    </div>
+    <div id="bottom-area"></div>
   </body>
 </html>
