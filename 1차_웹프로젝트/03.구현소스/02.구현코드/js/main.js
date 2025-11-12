@@ -130,7 +130,7 @@ let autoI, autoT;
 // -> 이변수는 clear시 사용함!
 
 // [2] 인터발, 타임아웃 시간 상수셋팅
-const IV_TIME = 2000;
+const IV_TIME = 5000;
 const TO_TIME = 5000;
 
 // 자동호출함수 최초호출 ////
