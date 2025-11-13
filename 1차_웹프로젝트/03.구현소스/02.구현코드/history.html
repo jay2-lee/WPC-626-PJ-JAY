@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ERUSAM - 연혁</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- 메인 CSS - 공통 스타일만 로드 -->
+
+    <!-- 제이쿼리 라이브러리 -->
+    <script src="./js/jquery-3.6.3.min.js"></script>
+    <script src="./js/jquery-ui.min.js" defer></script>
+
+    <!-- 공통 JS -->
+    <script src="./js/common.js" type="module"></script>
+
+    <!-- 서브페이지 JS -->
+    <script src="./js/history.js" defer></script>
+
+    <style>
+      /* 전체 리셋 */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Noto Sans KR', -apple-system, sans-serif;
+      }
+
+      /* 연혁 페이지 전용 스타일 */
+      
+      /* 히어로 섹션 */
+      .page-hero {
+        margin-top: 86px !important;
+        height: 400px !important;
+        background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                    url('./images/banner/aboutus.png') center/cover !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        position: relative !important;
+      }
+      
+      .page-hero h2 {
+        color: white !important;
+        font-size: 48px !important;
+        font-weight: 600 !important;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.5) !important;
+      }
+
+      /* 브레드크럼 */
+      .breadcrumb {
+        max-width: 1200px !important;
+        margin: 40px auto 20px !important;
+        padding: 0 40px !important;
+        font-size: 14px !important;
+        color: #666 !important;
+        display: flex !important;
+        align-items: center !important;
+        gap: 8px !important;
+      }
+
+      .breadcrumb a {
+        color: #666 !important;
+        text-decoration: none !important;
+      }
+
+      .breadcrumb a:hover {
+        color: #5B7FDB !important;
+      }
+
+      /* 메인 컨텐츠 */
+      .history-content {
+        max-width: 1200px !important;
+        margin: 0 auto !important;
+        padding: 60px 40px 100px !important;
+        background: white !important;
+      }
+
+      .history-content h1 {
+        font-size: 42px !important;
+        margin-bottom: 60px !important;
+        color: #222 !important;
+        font-weight: 600 !important;
+      }
+
+      /* 연혁 섹션 */
+      .history-section {
+        margin-bottom: 50px !important;
+        border-bottom: 1px solid #e0e0e0 !important;
+        padding-bottom: 30px !important;
+      }
+
+      .history-section:last-child {
+        border-bottom: none !important;
+      }
+
+      .history-year {
+        font-size: 24px !important;
+        color: #5B7FDB !important;
+        font-weight: 600 !important;
+        margin-bottom: 20px !important;
+      }
+
+      .history-list {
+        list-style: none !important;
+        padding: 0 !important;
+      }
+
+      .history-list li {
+        font-size: 17px !important;
+        line-height: 1.8 !important;
+        color: #555 !important;
+        margin-bottom: 12px !important;
+        padding-left: 20px !important;
+        position: relative !important;
+      }
+
+      .history-list li::before {
+        content: '•' !important;
+        position: absolute !important;
+        left: 0 !important;
+        color: #5B7FDB !important;
+        font-weight: bold !important;
+      }
+
+      @media (max-width: 768px) {
+        .page-hero {
+          height: 300px;
+          margin-top: 70px;
+        }
+
+        .page-hero h2 {
+          font-size: 36px;
+        }
+
+        .history-content {
+          padding: 40px 20px 60px;
+        }
+
+        .history-content h1 {
+          font-size: 32px;
+        }
+
+        .history-year {
+          font-size: 20px;
+        }
+
+        .history-list li {
+          font-size: 15px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 1. 상단영역 (common.js에서 자동 로드) -->
+    <div id="top-area"></div>
+
+    <!-- 2. 메인영역 -->
+    <div id="main-area">
+      <!-- 히어로 섹션 -->
+      <section class="page-hero">
+        <h2>회사소개</h2>
+      </section>
+
+      <!-- 브레드크럼 -->
+      <div class="breadcrumb">
+        <a href="index.html">홈</a>
+        <i class="fas fa-chevron-right"></i>
+        <a href="#">회사소개</a>
+        <i class="fas fa-chevron-right"></i>
+        <span>연혁</span>
+      </div>
+
+      <!-- 메인 컨텐츠 -->
+      <main class="history-content">
+        <h1>연혁</h1>
+
+        <section class="history-section">
+          <h2 class="history-year">2012년 5월</h2>
+          <ul class="history-list">
+            <li>회사설립 (제광홍 플라스틱원료/화학제품 판매/판촉)</li>
+            <li>신소재 사업개발 주력 (적외선 차단 소재/Film 코팅 완성업체)</li>
+            <li>컴퓨터제어 신소재관련 공동개발 및 공동개발된 품목 독점판매로 한의</li>
+          </ul>
+        </section>
+
+        <section class="history-section">
+          <h2 class="history-year">2012년 6월</h2>
+          <ul class="history-list">
+            <li>IR차단 나노소재 고객사에 적용 및 판매</li>
+          </ul>
+        </section>
+
+        <section class="history-section">
+          <h2 class="history-year">2013년 1월</h2>
+          <ul class="history-list">
+            <li>열차단 성유용 원가 절감 소재 대체품 개발</li>
+          </ul>
+        </section>
+
+        <section class="history-section">
+          <h2 class="history-year">2014년 4월</h2>
+          <ul class="history-list">
+            <li>특허등록 (원자단코팅층이 형성된 직물지)</li>
+          </ul>
+        </section>
+
+        <section class="history-section">
+          <h2 class="history-year">2014년 6월</h2>
+          <ul class="history-list">
+            <li>스텐스판타 관련 기술 및 영업진행</li>
+          </ul>
+        </section>
+
+        <section class="history-section">
+          <h2 class="history-year">2015년 1월</h2>
+          <ul class="history-list">
+            <li>재생 PET원료 일본 공급업체 확대 (JFE,KNC,NEGORO 등) 판매 1억 달성</li>
+          </ul>
+        </section>
+      </main>
+    </div>
+
+    <!-- 3. 하단영역 (common.js에서 자동 로드) -->
+    <div id="bottom-area"></div>
+  </body>
+</html>

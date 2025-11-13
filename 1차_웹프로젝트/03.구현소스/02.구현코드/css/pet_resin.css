@@ -1,5 +1,5 @@
 @charset "utf-8";
-/* PET RESIN 페이지 CSS - pet_resin.css */
+/* ERUSAM 메인 페이지 CSS - main.css */
 
 /* 외부 CSS 불러오기 */
 @import url(./reset.css);
@@ -17,6 +17,15 @@
 /***************** 메인 CSS *****************/
 
 /***************** 2. 메인영역 *****************/
-.pg{
-  height: 100vh;
+.pg {
+  height: 400px;
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+                    url('../images/banner/aboutus.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }

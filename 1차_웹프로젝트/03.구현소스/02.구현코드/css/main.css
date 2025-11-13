@@ -128,7 +128,7 @@
 .product-part {
   position: relative;
   height: 100vh;
-  background: url(../images/product_bg.png) no-repeat center/cover;
+  background: url(../images/banner/product_bg.png) no-repeat center/cover;
 }
 
 .product-part .icon-box {
