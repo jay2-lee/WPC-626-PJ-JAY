@@ -92,6 +92,7 @@ function initSearch() {
     searchForm.addEventListener('submit', function(e) {
       e.preventDefault();
       const query = searchInput.value.trim();
+      
       if (query) {
         alert('검색어: ' + query + '\n(실제 검색 기능은 서버 연동이 필요합니다)');
       }

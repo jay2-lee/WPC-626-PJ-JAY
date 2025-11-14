@@ -20,24 +20,24 @@
 
     <style>
       /* 향균제 페이지 전용 스타일 */
-      
+
       /* 히어로 섹션 */
       .page-hero {
         margin-top: 86px;
         height: 400px;
-        background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
-                    url('./images/banner/product_bg.png') center/cover;
+        background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+          url("./images/banner/product_bg.png") center/cover;
         display: flex;
         align-items: center;
         justify-content: center;
         position: relative;
       }
-      
+
       .page-hero h2 {
         color: white;
         font-size: 48px;
         font-weight: 600;
-        text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
       }
 
       /* 브레드크럼 */
@@ -58,7 +58,7 @@
       }
 
       .breadcrumb a:hover {
-        color: #5B7FDB;
+        color: #5b7fdb;
       }
 
       /* 메인 컨텐츠 */
@@ -107,7 +107,7 @@
         width: 100%;
         height: auto;
         border-radius: 10px;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
       }
 
       /* 제품 정보 테이블 */
@@ -120,13 +120,13 @@
         width: 100%;
         border-collapse: collapse;
         background: white;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         border-radius: 10px;
         overflow: hidden;
       }
 
       .product-table th {
-        background: #5B7FDB;
+        background: #5b7fdb;
         color: white;
         padding: 15px;
         text-align: left;
@@ -168,7 +168,7 @@
         padding: 15px 20px;
         background: white;
         border-radius: 5px;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
       }
 
       .download-label {
@@ -247,6 +247,7 @@
         .download-btn {
           width: 100%;
           text-align: center;
+          box-sizing: border-box;
         }
       }
     </style>
@@ -280,9 +281,12 @@
           <div class="product-images">
             <!-- 제품 이미지 1 -->
             <div class="product-image">
-              <img src="./images/antibacterial/image1.png" alt="향균제 제품 이미지 1" />
+              <img
+                src="./images/antibacterial/image1.png"
+                alt="향균제 제품 이미지 1"
+              />
             </div>
-            
+
             <!-- 제품 정보 테이블 -->
             <div class="product-table">
               <table>
@@ -311,7 +315,10 @@
                   </tr>
                   <tr>
                     <td>BIO PROTECT 7200</td>
-                    <td>항균,항곰팡이, 항바이러스 인체무해, 필터, 섬유, 플라스틱, 물티슈 등등.</td>
+                    <td>
+                      항균,항곰팡이, 항바이러스 인체무해, 필터, 섬유, 플라스틱,
+                      물티슈 등등.
+                    </td>
                     <td>세탁내구성 100회 이상</td>
                   </tr>
                   <tr>
@@ -332,39 +339,61 @@
                 </tbody>
               </table>
             </div>
-            
+
             <!-- 다운로드 버튼 그룹 -->
             <div class="download-group">
               <div class="download-item">
                 <span class="download-label">KC-TEX</span>
-                <a href="./downloads/KC-TEX.pdf" class="download-btn" download>다운로드</a>
+                <a href="./downloads/KC-TEX.pdf" class="download-btn" download
+                  >다운로드</a
+                >
               </div>
               <div class="download-item">
                 <span class="download-label">KC-TEX0840(S)</span>
-                <a href="./downloads/KC-TEX050.pdf" class="download-btn" download>다운로드</a>
+                <a
+                  href="./downloads/KC-TEX050.pdf"
+                  class="download-btn"
+                  download
+                  >다운로드</a
+                >
               </div>
               <div class="download-item">
                 <span class="download-label">KC-TEX0920</span>
-                <a href="./downloads/KC-TEX020.pdf" class="download-btn" download>다운로드</a>
+                <a
+                  href="./downloads/KC-TEX020.pdf"
+                  class="download-btn"
+                  download
+                  >다운로드</a
+                >
               </div>
               <div class="download-item">
                 <span class="download-label">Evergreen M-100CB</span>
-                <a href="./downloads/M-100CB.pdf" class="download-btn" download>다운로드</a>
+                <a href="./downloads/M-100CB.pdf" class="download-btn" download
+                  >다운로드</a
+                >
               </div>
               <div class="download-item">
                 <span class="download-label">BIO PROJECT 7200(생분해성)</span>
-                <a href="./downloads/BIO_7200.pdf" class="download-btn" download>다운로드</a>
+                <a href="./downloads/BIO_7200.pdf" class="download-btn" download
+                  >다운로드</a
+                >
               </div>
             </div>
-            
+
             <!-- 제품 이미지 3 -->
             <div class="product-image">
-              <img src="./images/antibacterial/image3.png" alt="향균제 상세 정보" />
+              <img
+                src="./images/antibacterial/image3.png"
+                alt="향균제 상세 정보"
+              />
             </div>
-            
+
             <!-- 제품 이미지 4 -->
             <div class="product-image">
-              <img src="./images/antibacterial/image4.png" alt="향균제 추가 정보" />
+              <img
+                src="./images/antibacterial/image4.png"
+                alt="향균제 추가 정보"
+              />
             </div>
           </div>
         </section>

@@ -1,0 +1,218 @@
+@charset "utf-8";
+/* 회사개요 페이지 전용 스타일 */
+
+/* 히어로 섹션 */
+.page-hero {
+  margin-top: 86px;
+  height: 400px;
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+              url('../images/banner/aboutus.png') center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.page-hero h2 {
+  color: white;
+  font-size: 48px;
+  font-weight: 600;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+/* 브레드크럼 */
+.breadcrumb {
+  max-width: 1200px;
+  margin: 40px auto 20px;
+  padding: 0 40px;
+  font-size: 14px;
+  color: #666;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.breadcrumb a {
+  color: #666;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  color: #5B7FDB;
+}
+
+/* 메인 컨텐츠 */
+.overview-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 40px 60px;
+}
+
+/* 메인 영역 하단 여백 제거 */
+#main-area {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* 하단 질문 영역 숨기기 */
+.question {
+  display: none !important;
+}
+
+.overview-content h1 {
+  font-size: 42px;
+  margin-bottom: 60px;
+  color: #222;
+  font-weight: 600;
+}
+
+/* 서브 타이틀 */
+.sub-title {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+
+.main-title {
+  font-size: 36px;
+  color: #222;
+  font-weight: 700;
+  margin-bottom: 60px;
+  letter-spacing: -0.5px;
+}
+
+/* 섹션 */
+.overview-section {
+  margin-bottom: 80px;
+}
+
+.section-title {
+  font-size: 28px;
+  color: #222;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.section-description {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* 5각형 다이어그램 영역 */
+.pentagon-diagram {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  margin: 60px 0;
+  padding: 60px 0;
+}
+
+.pentagon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: -55px;
+}
+
+/* 5각형 아이템 */
+.pentagon-item {
+  width: 220px;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 30px 20px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #fff;
+  font-weight: 500;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* 각 아이템 색상 및 방향 (위/아래 번갈아, 위치 조정) */
+.item-1 {
+  background: linear-gradient(135deg, #A67BC1 0%, #8B6BA8 100%);
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+  transform: translateY(-35px);
+  z-index: 1;
+}
+
+.item-2 {
+  background: linear-gradient(135deg, #4FC3A1 0%, #3DA888 100%);
+  clip-path: polygon(18% 0%, 82% 0%, 100% 62%, 50% 100%, 0% 62%);
+  transform: translateY(65px);
+  z-index: 2;
+}
+
+.item-3 {
+  background: linear-gradient(135deg, #B8B8B8 0%, #999999 100%);
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+  transform: translateY(-35px);
+  z-index: 1;
+}
+
+.item-4 {
+  background: linear-gradient(135deg, #5DCED8 0%, #4AB5BF 100%);
+  clip-path: polygon(18% 0%, 82% 0%, 100% 62%, 50% 100%, 0% 62%);
+  transform: translateY(65px);
+  z-index: 2;
+}
+
+@media (max-width: 768px) {
+  .page-hero {
+    height: 300px;
+    margin-top: 70px;
+  }
+
+  .page-hero h2 {
+    font-size: 36px;
+  }
+
+  .overview-content {
+    padding: 40px 20px 40px;
+  }
+
+  .overview-content h1 {
+    font-size: 32px;
+  }
+
+  .main-title {
+    font-size: 28px;
+  }
+
+  .section-title {
+    font-size: 24px;
+  }
+
+  .pentagon-diagram {
+    overflow-x: auto;
+    padding: 60px 20px;
+  }
+
+  .pentagon-container {
+    flex-wrap: nowrap;
+    gap: -45px;
+    min-width: fit-content;
+  }
+
+  .pentagon-item {
+    width: 160px;
+    height: 140px;
+    font-size: 12px;
+    padding: 20px 15px;
+    flex-shrink: 0;
+  }
+
+  .item-1, .item-3 {
+    transform: translateY(-25px);
+  }
+
+  .item-2, .item-4 {
+    transform: translateY(50px);
+  }
+}
