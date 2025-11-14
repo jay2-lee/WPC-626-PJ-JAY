@@ -10,10 +10,10 @@ export default () => {
   });
 
   // 로고 클릭 설정
-    document.querySelector(".logo a").addEventListener("click", (e) => {
-        e.preventDefault();
-        location.href = "index.html";
-    }); ////////// click //////////
+  document.querySelector(".logo a").addEventListener("click", (e) => {
+    e.preventDefault();
+    location.href = "index.html";
+  }); ////////// click //////////
 
   // 링크 대상 : .sub-menu a
   const linkMenu = document.querySelectorAll(".sub-menu a");
@@ -28,24 +28,40 @@ export default () => {
       // switch문으로 링크 설정하기 ///
       switch (txt) {
         case "회사개요":
+          location.href = "about_overview.html";
+          break;
         case "인사말":
-        case "연혁":
-        case "사업장소개":
           location.href = "about_us.html";
           break;
+        case "연혁":
+          location.href = "history.html";
+          break;
+        case "사업장소개":
+          location.href = "about_location.html";
+          break;
         case "PET JBB305(고상 Chip)":
+          location.href = "pet_jbb305.html";
+          break;
         case "PET JSB194(액상 Chip)":
-          location.href = "pet_resin.html";
+          location.href = "pet_jsb194.html";
           break;
         case "RECYCLED원료":
           location.href = "recycled.html";
           break;
         case "항균제":
+          location.href = "antibacterial.html";
+          break;
         case "DURASIL":
+          location.href = "durasil.html";
+          break;
         case "식미개선제_밥맛향상제":
+          location.href = "taste_enhancer.html";
+          break;
         case "세탁내구성 향상가공제":
+          location.href = "washing_durability.html";
+          break;
         case "ERS TEX":
-          location.href = "sinsoje.html";
+          location.href = "ers_tex.html";
           break;
         case "고객센터":
           location.href = "contact.html";

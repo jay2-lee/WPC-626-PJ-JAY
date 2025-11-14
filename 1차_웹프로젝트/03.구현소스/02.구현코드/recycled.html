@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ERUSAM - RECYCLED원료</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- 메인 CSS -->
+    <link rel="stylesheet" href="./css/about_us.css" />
+
+    <!-- 제이쿼리 라이브러리 -->
+    <script src="./js/jquery-3.6.3.min.js"></script>
+    <script src="./js/jquery-ui.min.js" defer></script>
+
+    <!-- 공통 JS -->
+    <script src="./js/common.js" type="module"></script>
+
+    <style>
+      /* RECYCLED원료 페이지 전용 스타일 */
+      
+      /* 히어로 섹션 */
+      .page-hero {
+        margin-top: 86px;
+        height: 400px;
+        background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                    url('./images/banner/product_bg.png') center/cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+      }
+      
+      .page-hero h2 {
+        color: white;
+        font-size: 48px;
+        font-weight: 600;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+      }
+
+      /* 브레드크럼 */
+      .breadcrumb {
+        max-width: 1200px;
+        margin: 40px auto 20px;
+        padding: 0 40px;
+        font-size: 14px;
+        color: #666;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .breadcrumb a {
+        color: #666;
+        text-decoration: none;
+      }
+
+      .breadcrumb a:hover {
+        color: #5B7FDB;
+      }
+
+      /* 메인 컨텐츠 */
+      .recycled-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 60px 40px 60px;
+      }
+
+      /* 메인 영역 하단 여백 제거 */
+      #main-area {
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+
+      /* 하단 질문 영역 숨기기 */
+      .question {
+        display: none !important;
+      }
+
+      .recycled-content h1 {
+        font-size: 42px;
+        margin-bottom: 60px;
+        color: #222;
+        font-weight: 600;
+      }
+
+      /* 섹션 배지 */
+      .section-badge {
+        display: inline-block;
+        background: linear-gradient(135deg, #5B7FDB 0%, #4A6BC9 100%);
+        color: white;
+        font-size: 20px;
+        font-weight: 600;
+        padding: 20px 40px;
+        border-radius: 10px;
+        margin-bottom: 40px;
+        position: relative;
+      }
+
+      .section-badge::after {
+        content: '';
+        position: absolute;
+        bottom: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 0;
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-top: 15px solid #4A6BC9;
+      }
+
+      /* 제품 섹션 */
+      .product-section {
+        margin-bottom: 80px;
+      }
+
+      /* Recycled원료 5개 이미지 */
+      .recycled-flakes {
+        display: flex;
+        justify-content: center;
+        gap: 0;
+        margin: 40px 0;
+        overflow-x: auto;
+      }
+
+      .recycled-flakes img {
+        height: 200px;
+        width: auto;
+        object-fit: cover;
+      }
+
+      /* Recycled PET 이미지들 */
+      .recycled-pet-images {
+        margin: 40px 0;
+      }
+
+      .pet-row {
+        display: flex;
+        justify-content: center;
+        gap: 0;
+        margin-bottom: 20px;
+        overflow-x: auto;
+      }
+
+      .pet-row img {
+        height: 180px;
+        width: auto;
+        object-fit: cover;
+      }
+
+      /* 큰 이미지 섹션 */
+      .info-image {
+        width: 100%;
+        margin: 40px 0;
+      }
+
+      .info-image img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      }
+
+      /* 다운로드 링크 영역 */
+      .download-section {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin: 60px 0;
+        flex-wrap: wrap;
+      }
+
+      .download-btn {
+        display: inline-block;
+        background-color: #666;
+        color: white;
+        font-size: 14px;
+        font-weight: 500;
+        padding: 12px 25px;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background-color 0.3s;
+      }
+
+      .download-btn:hover {
+        background-color: #555;
+      }
+
+      @media (max-width: 768px) {
+        .page-hero {
+          height: 300px;
+          margin-top: 70px;
+        }
+
+        .page-hero h2 {
+          font-size: 36px;
+        }
+
+        .recycled-content {
+          padding: 40px 20px 40px;
+        }
+
+        .recycled-content h1 {
+          font-size: 32px;
+        }
+
+        .section-badge {
+          font-size: 18px;
+          padding: 15px 30px;
+        }
+
+        .recycled-flakes img {
+          height: 120px;
+        }
+
+        .pet-row img {
+          height: 100px;
+        }
+
+        .download-section {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 1. 상단영역 (common.js에서 자동 로드) -->
+    <div id="top-area"></div>
+
+    <!-- 2. 메인영역 -->
+    <div id="main-area">
+      <!-- 히어로 섹션 -->
+      <section class="page-hero">
+        <h2>RECYCLED원료</h2>
+      </section>
+
+      <!-- 브레드크럼 -->
+      <div class="breadcrumb">
+        <a href="index.html">홈</a>
+        <i class="fas fa-chevron-right"></i>
+        <a href="#">RECYCLED원료</a>
+        <i class="fas fa-chevron-right"></i>
+        <span>RECYCLED원료</span>
+      </div>
+
+      <!-- 메인 컨텐츠 -->
+      <main class="recycled-content">
+        <h1>Recycled원료</h1>
+
+        <!-- Recycled원료 섹션 -->
+        <section class="product-section">
+          <div class="section-badge">Recycled원료</div>
+          
+          <div class="recycled-flakes">
+            <img src="./images/recycled/flake1.png" alt="PET재 무색칩" />
+          </div>
+        </section>
+
+        <!-- Recycled PET 섹션 -->
+        <section class="product-section">
+          <div class="section-badge">Recycled PET</div>
+          
+          <div class="recycled-pet-images">
+            <!-- 첫 번째 줄 -->
+            <div class="pet-row">
+              <img src="./images/recycled/flake2.png" alt="Recycled PET 1" />
+            </div>
+            
+            <!-- 두 번째 줄 -->
+            <div class="pet-row">
+              <img src="./images/recycled/flake3.png" alt="Recycled PET 5" />
+            </div>
+          </div>
+
+          <!-- 다운로드 링크 -->
+          <div class="download-section">
+            <a href="./downloads/PET PELLET.pdf" class="download-btn" download>PET PELLET 물성표</a>
+            <a href="./downloads/PET.pdf" class="download-btn" download>PET 병 분쇄품 물성표</a>
+          </div>
+
+          <!-- 정보 이미지 1 -->
+          <div class="info-image">
+            <img src="./images/recycled/flake4.png" alt="재활용 PET 병 리사이클 토탈 시스템" />
+          </div>
+
+          <!-- 정보 이미지 2 -->
+          <div class="info-image">
+            <img src="./images/recycled/flake5.png" alt="PET 병 재활용 흐름도" />
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- 3. 하단영역 (common.js에서 자동 로드) -->
+    <div id="bottom-area"></div>
+  </body>
+</html>

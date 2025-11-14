@@ -8,7 +8,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-    <!-- 메인 CSS - 공통 스타일만 로드 -->
+    <!-- 메인 CSS -->
+    <link rel="stylesheet" href="./css/about_us.css" />
 
     <!-- 제이쿼리 라이브러리 -->
     <script src="./js/jquery-3.6.3.min.js"></script>
@@ -21,112 +22,111 @@
     <script src="./js/history.js" defer></script>
 
     <style>
-      /* 전체 리셋 */
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      body {
-        font-family: 'Noto Sans KR', -apple-system, sans-serif;
-      }
-
       /* 연혁 페이지 전용 스타일 */
       
       /* 히어로 섹션 */
       .page-hero {
-        margin-top: 86px !important;
-        height: 400px !important;
+        margin-top: 86px;
+        height: 400px;
         background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
-                    url('./images/banner/aboutus.png') center/cover !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        position: relative !important;
+                    url('./images/banner/aboutus.png') center/cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
       }
       
       .page-hero h2 {
-        color: white !important;
-        font-size: 48px !important;
-        font-weight: 600 !important;
-        text-shadow: 2px 2px 4px rgba(0,0,0,0.5) !important;
+        color: white;
+        font-size: 48px;
+        font-weight: 600;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
       }
 
       /* 브레드크럼 */
       .breadcrumb {
-        max-width: 1200px !important;
-        margin: 40px auto 20px !important;
-        padding: 0 40px !important;
-        font-size: 14px !important;
-        color: #666 !important;
-        display: flex !important;
-        align-items: center !important;
-        gap: 8px !important;
+        max-width: 1200px;
+        margin: 40px auto 20px;
+        padding: 0 40px;
+        font-size: 14px;
+        color: #666;
+        display: flex;
+        align-items: center;
+        gap: 8px;
       }
 
       .breadcrumb a {
-        color: #666 !important;
-        text-decoration: none !important;
+        color: #666;
+        text-decoration: none;
       }
 
       .breadcrumb a:hover {
-        color: #5B7FDB !important;
+        color: #5B7FDB;
       }
 
       /* 메인 컨텐츠 */
       .history-content {
-        max-width: 1200px !important;
-        margin: 0 auto !important;
-        padding: 60px 40px 100px !important;
-        background: white !important;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 60px 40px 60px;
+      }
+
+      /* 메인 영역 하단 여백 제거 */
+      #main-area {
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+
+      /* 하단 질문 영역 숨기기 */
+      .question {
+        display: none !important;
       }
 
       .history-content h1 {
-        font-size: 42px !important;
-        margin-bottom: 60px !important;
-        color: #222 !important;
-        font-weight: 600 !important;
+        font-size: 42px;
+        margin-bottom: 60px;
+        color: #222;
+        font-weight: 600;
       }
 
       /* 연혁 섹션 */
       .history-section {
-        margin-bottom: 50px !important;
-        border-bottom: 1px solid #e0e0e0 !important;
-        padding-bottom: 30px !important;
+        margin-bottom: 50px;
+        border-bottom: 1px solid #e0e0e0;
+        padding-bottom: 30px;
       }
 
       .history-section:last-child {
-        border-bottom: none !important;
+        border-bottom: none;
       }
 
       .history-year {
-        font-size: 24px !important;
-        color: #5B7FDB !important;
-        font-weight: 600 !important;
-        margin-bottom: 20px !important;
+        font-size: 24px;
+        color: #5B7FDB;
+        font-weight: 600;
+        margin-bottom: 20px;
       }
 
       .history-list {
-        list-style: none !important;
-        padding: 0 !important;
+        list-style: none;
+        padding: 0;
       }
 
       .history-list li {
-        font-size: 17px !important;
-        line-height: 1.8 !important;
-        color: #555 !important;
-        margin-bottom: 12px !important;
-        padding-left: 20px !important;
-        position: relative !important;
+        font-size: 17px;
+        line-height: 1.8;
+        color: #555;
+        margin-bottom: 12px;
+        padding-left: 20px;
+        position: relative;
       }
 
       .history-list li::before {
-        content: '•' !important;
-        position: absolute !important;
-        left: 0 !important;
-        color: #5B7FDB !important;
-        font-weight: bold !important;
+        content: '•';
+        position: absolute;
+        left: 0;
+        color: #5B7FDB;
+        font-weight: bold;
       }
 
       @media (max-width: 768px) {
@@ -140,7 +140,7 @@
         }
 
         .history-content {
-          padding: 40px 20px 60px;
+          padding: 40px 20px 40px;
         }
 
         .history-content h1 {

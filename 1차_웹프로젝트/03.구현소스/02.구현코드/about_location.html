@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ERUSAM - 사업장소개</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- 메인 CSS -->
+    <link rel="stylesheet" href="./css/about_us.css" />
+
+    <!-- 제이쿼리 라이브러리 -->
+    <script src="./js/jquery-3.6.3.min.js"></script>
+    <script src="./js/jquery-ui.min.js" defer></script>
+
+    <!-- 공통 JS -->
+    <script src="./js/common.js" type="module"></script>
+
+    <style>
+      /* 사업장소개 페이지 전용 스타일 */
+      
+      /* 히어로 섹션 */
+      .page-hero {
+        margin-top: 86px;
+        height: 400px;
+        background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                    url('./images/banner/aboutus.png') center/cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+      }
+      
+      .page-hero h2 {
+        color: white;
+        font-size: 48px;
+        font-weight: 600;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+      }
+
+      /* 브레드크럼 */
+      .breadcrumb {
+        max-width: 1200px;
+        margin: 40px auto 20px;
+        padding: 0 40px;
+        font-size: 14px;
+        color: #666;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .breadcrumb a {
+        color: #666;
+        text-decoration: none;
+      }
+
+      .breadcrumb a:hover {
+        color: #5B7FDB;
+      }
+
+      /* 메인 컨텐츠 */
+      .location-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 60px 40px 60px;
+      }
+
+      /* 메인 영역 하단 여백 제거 */
+      #main-area {
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+
+      /* 하단 질문 영역 숨기기 */
+      .question {
+        display: none !important;
+      }
+
+      .location-content h1 {
+        font-size: 42px;
+        margin-bottom: 60px;
+        color: #222;
+        font-weight: 600;
+      }
+
+      /* 서울 배지 */
+      .location-badge {
+        display: inline-block;
+        background: linear-gradient(135deg, #5B7FDB 0%, #4A6BC9 100%);
+        color: white;
+        font-size: 28px;
+        font-weight: 600;
+        padding: 30px 60px;
+        border-radius: 10px;
+        margin-bottom: 40px;
+        position: relative;
+      }
+
+      .location-badge::after {
+        content: '';
+        position: absolute;
+        bottom: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 0;
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-top: 15px solid #4A6BC9;
+      }
+
+      /* 지도 영역 */
+      .map-container {
+        width: 100%;
+        margin: 40px 0;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      }
+
+      .map-container img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      /* 정보 박스 */
+      .info-box {
+        background: #fff;
+        border: 2px solid #5B7FDB;
+        border-radius: 10px;
+        padding: 40px;
+        margin-top: 40px;
+      }
+
+      .info-box h3 {
+        font-size: 28px;
+        color: #5B7FDB;
+        font-weight: 600;
+        margin-bottom: 30px;
+      }
+
+      .info-item {
+        display: flex;
+        margin-bottom: 20px;
+        font-size: 18px;
+        line-height: 1.8;
+      }
+
+      .info-label {
+        font-weight: 600;
+        color: #222;
+        min-width: 80px;
+        margin-right: 20px;
+      }
+
+      .info-value {
+        color: #555;
+        flex: 1;
+      }
+
+      @media (max-width: 768px) {
+        .page-hero {
+          height: 300px;
+          margin-top: 70px;
+        }
+
+        .page-hero h2 {
+          font-size: 36px;
+        }
+
+        .location-content {
+          padding: 40px 20px 40px;
+        }
+
+        .location-content h1 {
+          font-size: 32px;
+        }
+
+        .location-badge {
+          font-size: 24px;
+          padding: 25px 50px;
+        }
+
+        .info-box {
+          padding: 30px 20px;
+        }
+
+        .info-box h3 {
+          font-size: 24px;
+        }
+
+        .info-item {
+          flex-direction: column;
+          font-size: 16px;
+        }
+
+        .info-label {
+          margin-bottom: 5px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 1. 상단영역 (common.js에서 자동 로드) -->
+    <div id="top-area"></div>
+
+    <!-- 2. 메인영역 -->
+    <div id="main-area">
+      <!-- 히어로 섹션 -->
+      <section class="page-hero">
+        <h2>회사소개</h2>
+      </section>
+
+      <!-- 브레드크럼 -->
+      <div class="breadcrumb">
+        <a href="index.html">홈</a>
+        <i class="fas fa-chevron-right"></i>
+        <a href="#">회사소개</a>
+        <i class="fas fa-chevron-right"></i>
+        <span>사업장소개</span>
+      </div>
+
+      <!-- 메인 컨텐츠 -->
+      <main class="location-content">
+        <h1>사업장소개</h1>
+
+        <!-- 서울 배지 -->
+        <div class="location-badge">서울</div>
+
+        <!-- 지도 영역 -->
+        <div class="map-container">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.892289753289!2d126.90089507641984!3d37.55579872408983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c98ce05555555%3A0x0!2zMzfCsDMzJzIwLjkiTiAxMjbCsDU0JzA5LjIiRQ!5e0!3m2!1sko!2skr!4v1700000000000!5m2!1sko!2skr" 
+            width="100%" 
+            height="450" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+
+        <!-- 정보 박스 -->
+        <div class="info-box">
+          <h3>서울 정보</h3>
+          <div class="info-item">
+            <span class="info-label">전화</span>
+            <span class="info-value">02-356-1118</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">주소</span>
+            <span class="info-value">02-354-0597</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">팩스</span>
+            <span class="info-value">서울특별시 마포구 망원동7길 65 (2층,망원동)</span>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- 3. 하단영역 (common.js에서 자동 로드) -->
+    <div id="bottom-area"></div>
+  </body>
+</html>

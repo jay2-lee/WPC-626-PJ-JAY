@@ -27,6 +27,123 @@ fetch("./inc/header.html")
   .then((data) => {
     // data - 불러온 코드
     topArea.innerHTML = data;
+    // [2-1] 상단영역 불러오기
+fetch("./inc/header.html")
+  .then((res) => res.text())
+  .then((data) => {
+    topArea.innerHTML = data;
+
+    // 여기에 추가 ↓↓↓
+    // 검색 기능 초기화
+    initSearch();
+    // 언어 선택 기능 초기화
+    initLanguage();
+    
+    // 기존 코드...
+    $(".mob-menu-btn").click(function () {
+      $(this).toggleClass("on");
+      $(".menu-group").toggleClass("on");
+    });
+
+    linksys();
+  });
+
+// 검색 기능
+function initSearch() {
+  const searchBtn = document.getElementById('searchBtn');
+  const searchOverlay = document.getElementById('searchOverlay');
+  const searchClose = document.getElementById('searchClose');
+  const searchForm = document.getElementById('searchForm');
+  const searchInput = document.getElementById('searchInput');
+
+  if (searchBtn) {
+    searchBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      searchOverlay.classList.add('active');
+      setTimeout(() => searchInput.focus(), 300);
+    });
+  }
+
+  if (searchClose) {
+    searchClose.addEventListener('click', function(e) {
+      e.preventDefault();
+      searchOverlay.classList.remove('active');
+      searchInput.value = '';
+    });
+  }
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && searchOverlay && searchOverlay.classList.contains('active')) {
+      searchOverlay.classList.remove('active');
+      searchInput.value = '';
+    }
+  });
+
+  if (searchOverlay) {
+    searchOverlay.addEventListener('click', function(e) {
+      if (e.target === searchOverlay) {
+        searchOverlay.classList.remove('active');
+        searchInput.value = '';
+      }
+    });
+  }
+
+  if (searchForm) {
+    searchForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const query = searchInput.value.trim();
+      if (query) {
+        alert('검색어: ' + query + '\n(실제 검색 기능은 서버 연동이 필요합니다)');
+      }
+    });
+  }
+}
+
+// 언어 선택 기능
+function initLanguage() {
+  const langBtn = document.getElementById('langBtn');
+  const langDropdown = document.getElementById('langDropdown');
+
+  if (langBtn) {
+    langBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      langDropdown.classList.toggle('active');
+    });
+  }
+
+  if (langDropdown) {
+    const langLinks = langDropdown.querySelectorAll('a');
+    langLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const lang = this.getAttribute('data-lang');
+        
+        langLinks.forEach(l => l.classList.remove('active'));
+        this.classList.add('active');
+        
+        localStorage.setItem('selectedLang', lang);
+        alert('언어가 ' + this.textContent + '(으)로 변경되었습니다.');
+        
+        langDropdown.classList.remove('active');
+      });
+    });
+  }
+
+  document.addEventListener('click', function(e) {
+    if (langDropdown && !e.target.closest('.lang-selector')) {
+      langDropdown.classList.remove('active');
+    }
+  });
+
+  const savedLang = localStorage.getItem('selectedLang') || 'ko';
+  const langLinks = document.querySelectorAll('.lang-dropdown a');
+  langLinks.forEach(link => {
+    if (link.getAttribute('data-lang') === savedLang) {
+      link.classList.add('active');
+    }
+  });
+}
 
     // 상단 메뉴 클릭시 작동기능 //////
     $(".mob-menu-btn").click(function () {

@@ -6,7 +6,7 @@
     <!-- 1-1. 로고박스 -->
     <section class="logo-box">
       <h1 class="logo">
-        <a href="#">
+        <a href="index.html">
           <img src="./images/erusam_logo.png" alt="로고" />
         </a>
       </h1>
@@ -15,76 +15,68 @@
     <section class="menu-box">
       <!-- 메뉴박스하위 메뉴그룹박스 -->
       <div class="menu-group">
-        <!-- 1-2-1. 탑메뉴 -->
-        <!-- <nav class="top-menu">
-                <ul>
-                  <li><a href="">로그인</a></li>
-                  <li><a href="">회원가입</a></li>
-                  <li><a href="">검색</a></li>
-                </ul>
-              </nav> -->
         <!-- 1-2-2. GNB메뉴 -->
         <nav class="gnb-menu">
           <ul>
             <li>
-              <a href="">회사소개</a>
+              <a href="#">회사소개</a>
               <!-- 서브메뉴박스 -->
               <article class="sub-menu">
                 <div class="padding-box">
                   <ul>
-                    <li><a href="#">회사개요</a></li>
-                    <li><a href="#">인사말</a></li>
-                    <li><a href="#">연혁</a></li>
-                    <li><a href="#">사업장소개</a></li>
+                    <li><a href="about_overview.html">회사개요</a></li>
+                    <li><a href="about_us.html">인사말</a></li>
+                    <li><a href="history.html">연혁</a></li>
+                    <li><a href="about_location.html">사업장소개</a></li>
                   </ul>
                 </div>
               </article>
             </li>
             <li>
-              <a href="">PET RESIN(Huvis)</a>
+              <a href="#">PET RESIN(Huvis)</a>
               <!-- 서브메뉴박스 -->
               <article class="sub-menu">
                 <div class="padding-box">
                   <ul>
-                    <li><a href="#">PET JBB305(고상 Chip)</a></li>
-                    <li><a href="#">PET JSB194(액상 Chip)</a></li>
+                    <li><a href="pet_jbb305.html">PET JBB305(고상 Chip)</a></li>
+                    <li><a href="pet_jsb194.html">PET JSB194(액상 Chip)</a></li>
                   </ul>
                 </div>
               </article>
             </li>
             <li>
-              <a href="">RECYLED원료</a>
+              <a href="#">RECYLED원료</a>
               <!-- 서브메뉴박스 -->
               <article class="sub-menu">
                 <div class="padding-box">
                   <ul>
-                    <li><a href="#">RECYCLED원료</a></li>
+                    <li><a href="recycled.html">RECYCLED원료</a></li>
                   </ul>
                 </div>
               </article>
             </li>
             <li>
-              <a href="">신소재</a>
+              <a href="#">신소재</a>
               <!-- 서브메뉴박스 -->
               <article class="sub-menu">
                 <div class="padding-box">
                   <ul>
-                    <li><a href="#">항균제</a></li>
-                    <li><a href="#">DURASIL</a></li>
-                    <li><a href="#">식미개선제_밥맛향상제</a></li>
-                    <li><a href="#">세탁내구성 향상가공제</a></li>
-                    <li><a href="#">ERS TEX</a></li>
+                    <li><a href="antibacterial.html">항균제</a></li>
+                    <li><a href="durasil.html">DURASIL</a></li>
+                    <li><a href="taste_enhancer.html">식미개선제_밥맛향상제</a></li>
+                    <li><a href="washing_durability.html">세탁내구성 향상가공제</a></li>
+                    <li><a href="ers_tex.html">ERS TEX</a></li>
                   </ul>
                 </div>
               </article>
             </li>
             <li>
-              <a href="">고객센터</a>
+              <a href="#">고객센터</a>
               <!-- 서브메뉴박스 -->
               <article class="sub-menu">
                 <div class="padding-box">
                   <ul>
-                    <li><a href="#">고객센터</a></li>
+                    <li><a href="contact.html">고객센터</a></li>
                   </ul>
                 </div>
               </article>
@@ -95,16 +87,289 @@
     </section>
     <!-- 1-3. 박스 -->
     <section class="etc-box">
-      <a href="#" class="search-btn"
-        ><img src="./images/banner/mirroricon.png" alt="검색"
-      /></a>
-      <a href="#" class="lang-btn"
-        ><img src="./images/banner/global.png" alt="검색"
-      /></a>
+      <!-- 검색 버튼 -->
+      <a href="#" class="search-btn" id="searchBtn">
+        <img src="./images/banner/mirroricon.png" alt="검색" />
+      </a>
+      
+      <!-- 언어 선택 버튼 -->
+      <div class="lang-selector">
+        <a href="#" class="lang-btn" id="langBtn">
+          <img src="./images/banner/global.png" alt="언어선택" />
+        </a>
+        <!-- 언어 드롭다운 -->
+        <div class="lang-dropdown" id="langDropdown">
+          <a href="#" data-lang="ko">한국어</a>
+          <a href="#" data-lang="en">English</a>
+          <a href="#" data-lang="ja">日本語</a>
+        </div>
+      </div>
+      
+      <!-- 모바일 메뉴 버튼 -->
       <a href="#" class="mob-menu-btn">
         <i class="fa-solid fa-bars"></i>
         <i class="fa-solid fa-close"></i>
       </a>
     </section>
   </div>
+  
+  <!-- 검색 오버레이 -->
+  <div class="search-overlay" id="searchOverlay">
+    <div class="search-container">
+      <button class="search-close" id="searchClose">
+        <i class="fa-solid fa-times"></i>
+      </button>
+      <form class="search-form" id="searchForm">
+        <input 
+          type="text" 
+          class="search-input" 
+          placeholder="검색어를 입력하세요..." 
+          id="searchInput"
+        />
+        <button type="submit" class="search-submit">
+          <i class="fa-solid fa-search"></i>
+        </button>
+      </form>
+    </div>
+  </div>
 </header>
+
+<style>
+/* 검색 오버레이 */
+.search-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.95);
+  z-index: 99999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.search-overlay.active {
+  display: flex;
+  opacity: 1;
+}
+
+.search-container {
+  position: relative;
+  width: 90%;
+  max-width: 600px;
+}
+
+.search-close {
+  position: absolute;
+  top: -50px;
+  right: 0;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.search-close:hover {
+  transform: rotate(90deg);
+}
+
+.search-form {
+  display: flex;
+  gap: 10px;
+}
+
+.search-input {
+  flex: 1;
+  padding: 20px 30px;
+  font-size: 20px;
+  border: 2px solid #fff;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  outline: none;
+  transition: all 0.3s;
+}
+
+.search-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.search-input:focus {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: #5B7FDB;
+}
+
+.search-submit {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #5B7FDB;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.search-submit:hover {
+  background: #4A6BC9;
+  transform: scale(1.1);
+}
+
+/* 언어 선택 */
+.lang-selector {
+  position: relative;
+}
+
+.lang-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 10px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  display: none;
+  min-width: 120px;
+  z-index: 1000;
+}
+
+.lang-dropdown.active {
+  display: block;
+}
+
+.lang-dropdown a {
+  display: block;
+  padding: 12px 20px;
+  color: #333;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+
+.lang-dropdown a:hover {
+  background: #f0f0f0;
+}
+
+.lang-dropdown a.active {
+  background: #5B7FDB;
+  color: white;
+}
+</style>
+
+<script>
+// 검색 기능
+document.addEventListener('DOMContentLoaded', function() {
+  const searchBtn = document.getElementById('searchBtn');
+  const searchOverlay = document.getElementById('searchOverlay');
+  const searchClose = document.getElementById('searchClose');
+  const searchForm = document.getElementById('searchForm');
+  const searchInput = document.getElementById('searchInput');
+
+  // 검색 열기
+  if (searchBtn) {
+    searchBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      searchOverlay.classList.add('active');
+      setTimeout(() => searchInput.focus(), 300);
+    });
+  }
+
+  // 검색 닫기
+  if (searchClose) {
+    searchClose.addEventListener('click', function(e) {
+      e.preventDefault();
+      searchOverlay.classList.remove('active');
+      searchInput.value = '';
+    });
+  }
+
+  // ESC 키로 닫기
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && searchOverlay.classList.contains('active')) {
+      searchOverlay.classList.remove('active');
+      searchInput.value = '';
+    }
+  });
+
+  // 오버레이 클릭 시 닫기
+  searchOverlay.addEventListener('click', function(e) {
+    if (e.target === searchOverlay) {
+      searchOverlay.classList.remove('active');
+      searchInput.value = '';
+    }
+  });
+
+  // 검색 실행
+  if (searchForm) {
+    searchForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const query = searchInput.value.trim();
+      if (query) {
+        alert('검색어: ' + query + '\n(실제 검색 기능은 서버 연동이 필요합니다)');
+        // 실제 구현 시: location.href = 'search.html?q=' + encodeURIComponent(query);
+      }
+    });
+  }
+
+  // 언어 선택 기능
+  const langBtn = document.getElementById('langBtn');
+  const langDropdown = document.getElementById('langDropdown');
+
+  // 언어 버튼 클릭
+  if (langBtn) {
+    langBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      langDropdown.classList.toggle('active');
+    });
+  }
+
+  // 언어 선택
+  if (langDropdown) {
+    const langLinks = langDropdown.querySelectorAll('a');
+    langLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const lang = this.getAttribute('data-lang');
+        
+        // 모든 언어 링크에서 active 클래스 제거
+        langLinks.forEach(l => l.classList.remove('active'));
+        // 선택된 언어에 active 클래스 추가
+        this.classList.add('active');
+        
+        // 언어 변경 처리
+        localStorage.setItem('selectedLang', lang);
+        alert('언어가 ' + this.textContent + '(으)로 변경되었습니다.\n(실제 다국어 기능은 추가 구현이 필요합니다)');
+        
+        langDropdown.classList.remove('active');
+        
+        // 실제 구현 시 페이지 언어 변경 처리
+        // location.href = location.pathname + '?lang=' + lang;
+      });
+    });
+  }
+
+  // 문서 클릭 시 드롭다운 닫기
+  document.addEventListener('click', function(e) {
+    if (langDropdown && !e.target.closest('.lang-selector')) {
+      langDropdown.classList.remove('active');
+    }
+  });
+
+  // 저장된 언어 설정 불러오기
+  const savedLang = localStorage.getItem('selectedLang') || 'ko';
+  const langLinks = document.querySelectorAll('.lang-dropdown a');
+  langLinks.forEach(link => {
+    if (link.getAttribute('data-lang') === savedLang) {
+      link.classList.add('active');
+    }
+  });
+});
+</script>
