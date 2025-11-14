@@ -334,3 +334,60 @@
   background: #5B7FDB;
   color: white;
 }
+/* 스크롤 이동 버튼 */
+.scroll-buttons {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 9998;
+}
+
+.scroll-btn {
+  width: 70px;
+  height: 70px;
+  border-radius: 10px;
+  background-color: rgba(91, 127, 219, 0.8);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(5px);
+}
+
+.scroll-btn:hover {
+  background-color: rgba(74, 107, 201, 0.9);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.scroll-btn.scroll-top {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+}
+
+.scroll-btn.scroll-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media (max-width: 768px) {
+  .scroll-buttons {
+    right: 15px;
+    bottom: 15px;
+  }
+  
+  .scroll-btn {
+    width: 55px;
+    height: 55px;
+    font-size: 22px;
+  }
+}

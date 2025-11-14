@@ -162,6 +162,60 @@ fetch("./inc/footer.html")
   // 불러온 코드 처리
   .then((data) => {
     bottomArea.innerHTML = data;
+    // [2-2] 하단영역 불러오기
+fetch("./inc/footer.html")
+  .then((res) => res.text())
+  .then((data) => {
+    bottomArea.innerHTML = data;
+    
+    // 여기에 추가 ↓↓↓
+    // 스크롤 버튼 초기화
+    initScrollButtons();
+    
+    if(pagename2 === "index") {
+      autoScroll();
+    }
+  });
+
+// 스크롤 버튼 기능
+function initScrollButtons() {
+  const scrollTopBtn = document.getElementById('scrollTopBtn');
+  const scrollDownBtn = document.getElementById('scrollDownBtn');
+  
+  // 위로 가기 버튼
+  if (scrollTopBtn) {
+    scrollTopBtn.addEventListener('click', function() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  }
+  
+  // 아래로 가기 버튼
+  if (scrollDownBtn) {
+    scrollDownBtn.addEventListener('click', function() {
+      const currentScroll = window.pageYOffset;
+      const windowHeight = window.innerHeight;
+      
+      window.scrollTo({
+        top: currentScroll + windowHeight,
+        behavior: 'smooth'
+      });
+    });
+  }
+  
+  // 스크롤 시 위로가기 버튼 표시/숨김
+  window.addEventListener('scroll', function() {
+    if (scrollTopBtn) {
+      if (window.pageYOffset > 300) {
+        scrollTopBtn.classList.add('show');
+      } else {
+        scrollTopBtn.classList.remove('show');
+      }
+    }
+  });
+}
     // 하단까지 모두 불러온후 index페이지일때만!
     // 자동스크롤 기능함수 호출!
     if(pagename2 === "index") {
