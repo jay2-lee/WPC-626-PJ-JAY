@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ERUSAM - 포름알데히드 캐쳐제</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- 메인 CSS -->
+    <link rel="stylesheet" href="./css/about_us.css" />
+
+    <!-- 제이쿼리 라이브러리 -->
+    <script src="./js/jquery-3.6.3.min.js"></script>
+    <script src="./js/jquery-ui.min.js" defer></script>
+
+    <!-- 공통 JS -->
+    <script src="./js/common.js" type="module"></script>
+
+    <style>
+      /* 포름알데히드 캐쳐제 페이지 전용 스타일 */
+      
+      /* 히어로 섹션 */
+      .page-hero {
+        margin-top: 86px;
+        height: 400px;
+        background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                    url('./images/banner/product_bg.png') center/cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+      }
+      
+      .page-hero h2 {
+        color: white;
+        font-size: 48px;
+        font-weight: 600;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+      }
+
+      /* 브레드크럼 */
+      .breadcrumb {
+        max-width: 1200px;
+        margin: 40px auto 20px;
+        padding: 0 40px;
+        font-size: 14px;
+        color: #666;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .breadcrumb a {
+        color: #666;
+        text-decoration: none;
+      }
+
+      .breadcrumb a:hover {
+        color: #5B7FDB;
+      }
+
+      /* 메인 컨텐츠 */
+      .product-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 60px 40px 60px;
+      }
+
+      /* 메인 영역 하단 여백 제거 */
+      #main-area {
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+
+      /* 하단 질문 영역 숨기기 */
+      .question {
+        display: none !important;
+      }
+
+      .product-content h1 {
+        font-size: 42px;
+        margin-bottom: 60px;
+        color: #222;
+        font-weight: 600;
+      }
+
+      /* 제품 섹션 */
+      .product-section {
+        margin-bottom: 60px;
+      }
+
+      /* 섹션 헤더 - 이미지와 동일한 스타일 */
+      .section-header {
+        display: inline-block;
+        background-color: #5B7FDB;
+        color: white;
+        font-size: 20px;
+        font-weight: 600;
+        font-style: italic;
+        padding: 15px 30px;
+        border-radius: 8px;
+        margin-bottom: 40px;
+        letter-spacing: 0.5px;
+      }
+
+      /* 설명 텍스트 */
+      .description-text {
+        font-size: 16px;
+        line-height: 1.9;
+        color: #333;
+        margin-bottom: 30px;
+      }
+
+      .description-text p {
+        margin-bottom: 20px;
+      }
+
+      .description-text strong {
+        font-weight: 700;
+        color: #000;
+      }
+
+      /* 별표 스타일 */
+      .stars {
+        color: #000;
+        letter-spacing: 2px;
+      }
+
+      /* 테이블 스타일 - 이미지와 동일하게 */
+      .product-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 40px 0;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      .product-table thead {
+        background-color: #5B7FDB;
+        color: white;
+      }
+
+      .product-table th {
+        padding: 18px 15px;
+        text-align: center;
+        font-weight: 600;
+        font-size: 15px;
+        border-right: 1px solid rgba(255,255,255,0.2);
+      }
+
+      .product-table th:last-child {
+        border-right: none;
+      }
+
+      .product-table tbody tr {
+        background-color: #fff;
+      }
+
+      .product-table tbody tr:nth-child(even) {
+        background-color: #E8EDF5;
+      }
+
+      .product-table td {
+        padding: 15px;
+        text-align: center;
+        border-right: 1px solid #ddd;
+        font-size: 14px;
+        color: #333;
+      }
+
+      .product-table td:last-child {
+        border-right: none;
+      }
+
+      /* 빨간색 텍스트 */
+      .red-text {
+        color: #E74C3C;
+        font-weight: 600;
+      }
+
+      /* 검정색 텍스트 */
+      .black-text {
+        color: #000;
+        font-weight: 600;
+      }
+
+      /* 제품명 열 스타일 */
+      .product-name {
+        font-weight: 600;
+        text-align: left;
+        padding-left: 20px;
+      }
+
+      /* 주용도 열 넓이 조정 */
+      .product-table td.wide-cell {
+        text-align: left;
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+
+      /* 사용 방법 열 */
+      .product-table td.method-cell {
+        text-align: left;
+        padding-left: 15px;
+      }
+
+      /* 사용량 열 */
+      .product-table td.amount-cell {
+        text-align: left;
+        padding-left: 15px;
+      }
+
+      /* 화살표 스타일 */
+      .arrow {
+        display: inline-block;
+        margin-right: 5px;
+      }
+
+      /* 다운로드 버튼 */
+      .download-btn {
+        display: inline-block;
+        background-color: #666;
+        color: white;
+        font-size: 16px;
+        font-weight: 500;
+        padding: 15px 40px;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background-color 0.3s;
+        margin-top: 20px;
+      }
+
+      .download-btn:hover {
+        background-color: #555;
+      }
+
+      .download-btn i {
+        margin-right: 8px;
+      }
+
+      @media (max-width: 768px) {
+        .page-hero {
+          height: 300px;
+          margin-top: 70px;
+        }
+
+        .page-hero h2 {
+          font-size: 36px;
+        }
+
+        .product-content {
+          padding: 40px 20px 40px;
+        }
+
+        .product-content h1 {
+          font-size: 32px;
+        }
+
+        .section-header {
+          font-size: 18px;
+          padding: 12px 25px;
+        }
+
+        .description-text {
+          font-size: 15px;
+        }
+
+        .product-table {
+          font-size: 12px;
+        }
+
+        .product-table th,
+        .product-table td {
+          padding: 10px 8px;
+        }
+
+        .download-btn {
+          font-size: 14px;
+          padding: 12px 30px;
+        }
+
+        /* 모바일에서 테이블 스크롤 가능하게 */
+        .table-wrapper {
+          overflow-x: auto;
+        }
+
+        .product-table {
+          min-width: 800px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 1. 상단영역 (common.js에서 자동 로드) -->
+    <div id="top-area"></div>
+
+    <!-- 2. 메인영역 -->
+    <div id="main-area">
+      <!-- 히어로 섹션 -->
+      <section class="page-hero">
+        <h2>신소재</h2>
+      </section>
+
+      <!-- 브레드크럼 -->
+      <div class="breadcrumb">
+        <a href="index.html">홈</a>
+        <i class="fas fa-chevron-right"></i>
+        <a href="#">신소재</a>
+        <i class="fas fa-chevron-right"></i>
+        <span>포름알데히드 캐쳐제</span>
+      </div>
+
+      <!-- 메인 컨텐츠 -->
+      <main class="product-content">
+        <h1>포름알데히드 캐쳐제(Formaldehyde Catcher)</h1>
+
+        <!-- ABOUT PRODUCT 섹션 -->
+        <section class="product-section">
+          <div class="section-header">ABOUT PRODUCT</div>
+
+          <div class="description-text">
+            <p>
+              현대 주택의 고밀도화와 신축 건물 증가로 인해, 실내 공간에서 방출되는 <strong>포름알데히드(Formaldehyde)</strong> 가 원인이 되는 두통, 어지럼증 등의 증상, 이른바 '<strong>새집증후군(Sick House Syndrome)</strong>' 이 사회적 문제로 대두되고 있습니다.
+            </p>
+            <p>
+              그럼에도 불구하고, 포름알데히드를 포함한 각종 소재는 여전히 건축자재 및 생활용품에 <strong>우본병하게 사용</strong>되고 있는 실정입니다.
+            </p>
+            <p>
+              <strong>FORMALDEHYDE CATCHER</strong>는 이러한 사회적 이슈와 F<span class="stars">☆☆☆☆</span> <strong>(JAS 규격)</strong> 에 대응하기 위해 개발된 친환경 기능성 제품으로,
+            </p>
+            <p>
+              <strong>건축자재 표면에 도포하거나 혼입하여 포름알데히드를 흡과적으로 억제 또는 제거</strong>합니다.
+            </p>
+            <p>
+              또한, 본 제품은 건축자재 분야 이외에 <strong>섬유, 도료, 접착재, 수지, 인테리어 자재 등 다양한 산업 분야</strong>에서도 활용되고 있습니다.
+            </p>
+            <p style="margin-top: 30px;">
+              <strong>FORMALDEHYDE CATCHER SERIES</strong>는 <strong>친류 포름알데히드를 화학적으로 결합하여 중화 제거</strong>하는 <strong>고기능성 첨가제</strong>입니다.
+            </p>
+            <p>
+              적은 사용량으로도 포름알데히드 억제에 효과적이며, <strong>다양한 수지와 뛰어난 호환성</strong>을 보유하고 있습니다.
+            </p>
+          </div>
+        </section>
+
+        <!-- PRODUCT LINE-UP & PHYSICAL PROPERTIES 섹션 -->
+        <section class="product-section">
+          <div class="section-header">PRODUCT LINE-UP & PHYSICAL PROPERTIES</div>
+
+          <div class="table-wrapper">
+            <table class="product-table">
+              <thead>
+                <tr>
+                  <th style="width: 12%;">품명</th>
+                  <th style="width: 8%;">상태</th>
+                  <th style="width: 8%;">고형분<br>(%)</th>
+                  <th style="width: 6%;">pH</th>
+                  <th style="width: 26%;">주용도(특징)</th>
+                  <th style="width: 18%;">사용 방법</th>
+                  <th style="width: 22%;">사용량</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- 1행 -->
+                <tr>
+                  <td class="product-name black-text">RESIN FC-460</td>
+                  <td>수용액</td>
+                  <td>34</td>
+                  <td>7.8</td>
+                  <td class="wide-cell"><strong>건자재 : 합판, 보드류, 바닥재 등</strong></td>
+                  <td class="method-cell">
+                    Spray,<br>
+                    Roll coating
+                  </td>
+                  <td class="amount-cell">
+                    <span class="arrow">▶</span> 2~3배 희석<br>
+                    <span class="arrow">▶</span> 22~33g/m²
+                  </td>
+                </tr>
+                <!-- 2행 -->
+                <tr>
+                  <td class="product-name red-text">RESIN FC-478</td>
+                  <td class="red-text">수용액</td>
+                  <td class="red-text">30</td>
+                  <td class="red-text">7.5</td>
+                  <td class="wide-cell red-text"><strong>건자재 : FC-480 대비 원료성 향상품</strong></td>
+                  <td class="method-cell red-text">
+                    Spray,<br>
+                    Roll coating
+                  </td>
+                  <td class="amount-cell red-text">
+                    <span class="arrow">▶</span> 2~3배 희석<br>
+                    <span class="arrow">▶</span> 22~33g/m²
+                  </td>
+                </tr>
+                <!-- 3행 -->
+                <tr>
+                  <td class="product-name red-text">RESIN FC-8G</td>
+                  <td class="red-text">수용액</td>
+                  <td class="red-text">6</td>
+                  <td class="red-text">6.3</td>
+                  <td class="wide-cell red-text"><strong>단열재 : Glass Wool, Rock Wool 등</strong></td>
+                  <td class="method-cell red-text">Spray</td>
+                  <td class="amount-cell red-text">
+                    <span class="arrow">▶</span> 원액<br>
+                    <span class="arrow">▶</span> 22~44g/m²
+                  </td>
+                </tr>
+                <!-- 4행 -->
+                <tr>
+                  <td class="product-name black-text">RESIN FC-15R</td>
+                  <td>수용액</td>
+                  <td>12</td>
+                  <td>8.0</td>
+                  <td class="wide-cell"><strong>단열재 : Rock Wool</strong></td>
+                  <td class="method-cell">Spray</td>
+                  <td class="amount-cell">
+                    <span class="arrow">▶</span> 원액<br>
+                    <span class="arrow">▶</span> 약 20g/m²
+                  </td>
+                </tr>
+                <!-- 5행 -->
+                <tr>
+                  <td class="product-name black-text">RESIN FC-800A</td>
+                  <td>수용액</td>
+                  <td>20</td>
+                  <td>8.3</td>
+                  <td class="wide-cell">
+                    <strong>무기질보드 : 석고, 시멘트 등</strong><br>
+                    (공기중 포름알데 흡착·제거)
+                  </td>
+                  <td class="method-cell">Mixing</td>
+                  <td class="amount-cell">
+                    <span class="arrow">▶</span> 원액<br>
+                    <span class="arrow">▶</span> 200~300g/m²
+                  </td>
+                </tr>
+                <!-- 6행 -->
+                <tr>
+                  <td class="product-name red-text">RESIN FC-1000</td>
+                  <td class="red-text">수용액</td>
+                  <td class="red-text">12.5</td>
+                  <td class="red-text">8.5</td>
+                  <td class="wide-cell red-text">
+                    <strong>자동차 내장재 관련 : 부직포·펠트<br>
+                    (포름알데히드, 아세트알데히드 등적)</strong>
+                  </td>
+                  <td class="method-cell red-text">
+                    Spray<br>
+                    후가공 : Dip→Nip<br>
+                    (원부재 혼합 사용)
+                  </td>
+                  <td class="amount-cell red-text">
+                    <span class="arrow">▶</span> 원액<br>
+                    <span class="arrow">▶</span> 30~50g/m²
+                  </td>
+                </tr>
+                <!-- 7행 -->
+                <tr>
+                  <td class="product-name red-text">RESIN FCS-20</td>
+                  <td class="red-text">용제형</td>
+                  <td class="red-text">20</td>
+                  <td>-</td>
+                  <td class="wide-cell red-text">
+                    <strong>도료 및 접착제<br>
+                    유성 및 수성 가능 (상용성 사전 테스트)</strong>
+                  </td>
+                  <td class="method-cell red-text">Mixing</td>
+                  <td class="amount-cell red-text">
+                    <span class="arrow">▶</span> 원액<br>
+                    <span class="arrow">▶</span> 5~10% 첨가
+                  </td>
+                </tr>
+                <!-- 8행 -->
+                <tr>
+                  <td class="product-name red-text">RESIN C-76</td>
+                  <td class="red-text">수용액</td>
+                  <td class="red-text">38</td>
+                  <td class="red-text">9.0</td>
+                  <td class="wide-cell red-text"><strong>섬유 : 후가공(Finishing process)</strong></td>
+                  <td class="method-cell red-text">후가공</td>
+                  <td class="amount-cell red-text">
+                    <span class="arrow">▶</span> 원액<br>
+                    <span class="arrow">▶</span> 2%(O.W.F)
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- 다운로드 버튼 -->
+        <a href="./downloads/Formaldehyde.pdf" class="download-btn" download>
+          <i class="fas fa-download"></i>
+          다운로드
+        </a>
+      </main>
+    </div>
+
+    <!-- 3. 하단영역 (common.js에서 자동 로드) -->
+    <div id="bottom-area"></div>
+  </body>
+</html>

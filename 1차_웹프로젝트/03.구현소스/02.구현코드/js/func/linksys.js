@@ -60,6 +60,9 @@ export default () => {
         case "세탁내구성 향상가공제":
           location.href = "washing_durability.html";
           break;
+        case "포름알데히드 캐쳐제":
+          location.href = "formaldehyde.html";
+          break;
         case "ERS TEX":
           location.href = "ers_tex.html";
           break;
