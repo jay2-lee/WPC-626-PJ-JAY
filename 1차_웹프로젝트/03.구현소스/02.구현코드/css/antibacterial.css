@@ -1,0 +1,231 @@
+/* antibacterial.html에서 분리된 페이지 전용 스타일 */
+
+/* 히어로 섹션 */
+.page-hero {
+  margin-top: 86px;
+  height: 400px;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("../images/banner/product_bg.png") center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.page-hero h2 {
+  color: white;
+  font-size: 48px;
+  font-weight: 600;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* 브레드크럼 */
+.breadcrumb {
+  max-width: 1200px;
+  margin: 40px auto 20px;
+  padding: 0 40px;
+  font-size: 14px;
+  color: #666;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.breadcrumb a {
+  color: #666;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  color: #5b7fdb;
+}
+
+/* 메인 컨텐츠 */
+.product-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 40px 60px;
+}
+
+/* 메인 영역 하단 여백 제거 */
+#main-area {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* 하단 질문 영역 숨기기 */
+.question {
+  display: none !important;
+}
+
+.product-content h1 {
+  font-size: 42px;
+  margin-bottom: 60px;
+  color: #222;
+  font-weight: 600;
+}
+
+/* 제품 섹션 */
+.product-section {
+  margin-bottom: 80px;
+}
+
+/* 제품 이미지 영역 */
+.product-images {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin: 40px 0;
+}
+
+.product-image {
+  width: 100%;
+}
+
+.product-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* 제품 정보 테이블 */
+.product-table {
+  margin: 40px 0;
+  overflow-x: auto;
+}
+
+.product-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.product-table th {
+  background: #5b7fdb;
+  color: white;
+  padding: 15px;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.product-table td {
+  padding: 15px;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 15px;
+  color: #555;
+}
+
+.product-table tr:last-child td {
+  border-bottom: none;
+}
+
+.product-table tr:hover {
+  background: #f8f9fa;
+}
+
+/* 다운로드 그룹 */
+.download-group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin: 60px 0;
+  padding: 40px;
+  background: #f8f9fa;
+  border-radius: 10px;
+}
+
+.download-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 15px 20px;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.download-label {
+  font-size: 15px;
+  color: #333;
+  font-weight: 500;
+  flex: 1;
+}
+
+/* 다운로드 버튼 */
+.download-btn {
+  display: inline-block;
+  background-color: #666;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px 25px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  white-space: nowrap;
+}
+
+.download-btn:hover {
+  background-color: #555;
+}
+
+@media (max-width: 768px) {
+  .page-hero {
+    height: 300px;
+    margin-top: 70px;
+  }
+
+  .page-hero h2 {
+    font-size: 36px;
+  }
+
+  .product-content {
+    padding: 40px 20px 40px;
+  }
+
+  .product-content h1 {
+    font-size: 32px;
+  }
+
+  .product-images {
+    gap: 30px;
+  }
+
+  .product-table {
+    overflow-x: auto;
+  }
+
+  .product-table table {
+    font-size: 13px;
+  }
+
+  .product-table th,
+  .product-table td {
+    padding: 10px;
+    font-size: 13px;
+  }
+
+  .download-group {
+    grid-template-columns: 1fr;
+    padding: 30px 20px;
+    gap: 15px;
+  }
+
+  .download-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .download-btn {
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+  }
+}

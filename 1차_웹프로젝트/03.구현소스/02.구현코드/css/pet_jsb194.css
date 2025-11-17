@@ -1,0 +1,135 @@
+/* pet_jsb194.html에서 분리된 제품소개 페이지 전용 스타일 */
+
+/* 히어로 섹션 */
+.page-hero {
+  margin-top: 86px;
+  height: 400px;
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+              url('../images/banner/product_bg.png') center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.page-hero h2 {
+  color: white;
+  font-size: 48px;
+  font-weight: 600;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+/* 브레드크럼 */
+.breadcrumb {
+  max-width: 1200px;
+  margin: 40px auto 20px;
+  padding: 0 40px;
+  font-size: 14px;
+  color: #666;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.breadcrumb a {
+  color: #666;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  color: #5B7FDB;
+}
+
+/* 메인 컨텐츠 */
+.product-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 40px 60px;
+}
+
+/* 메인 영역 하단 여백 제거 */
+#main-area {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* 하단 질문 영역 숨기기 */
+.question {
+  display: none !important;
+}
+
+.product-content h1 {
+  font-size: 42px;
+  margin-bottom: 60px;
+  color: #222;
+  font-weight: 600;
+}
+
+/* 제품 이미지 영역 */
+.product-images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin: 40px 0 60px;
+}
+
+.product-image {
+  width: 100%;
+}
+
+.product-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* 다운로드 버튼 */
+.download-btn {
+  display: inline-block;
+  background-color: #666;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 15px 40px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.download-btn:hover {
+  background-color: #555;
+}
+
+.download-btn i {
+  margin-right: 8px;
+}
+
+@media (max-width: 768px) {
+  .page-hero {
+    height: 300px;
+    margin-top: 70px;
+  }
+
+  .page-hero h2 {
+    font-size: 36px;
+  }
+
+  .product-content {
+    padding: 40px 20px 40px;
+  }
+
+  .product-content h1 {
+    font-size: 32px;
+  }
+
+  .product-images {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .download-btn {
+    font-size: 14px;
+    padding: 12px 30px;
+  }
+}

@@ -1,0 +1,272 @@
+/* Formaldehyde.html에서 분리된 포름알데히드 캐쳐제 페이지 전용 스타일 */
+
+/* 히어로 섹션 */
+.page-hero {
+  margin-top: 86px;
+  height: 400px;
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+              url('../images/banner/product_bg.png') center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.page-hero h2 {
+  color: white;
+  font-size: 48px;
+  font-weight: 600;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+/* 브레드크럼 */
+.breadcrumb {
+  max-width: 1200px;
+  margin: 40px auto 20px;
+  padding: 0 40px;
+  font-size: 14px;
+  color: #666;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.breadcrumb a {
+  color: #666;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  color: #5B7FDB;
+}
+
+/* 메인 컨텐츠 */
+.product-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 40px 60px;
+}
+
+/* 메인 영역 하단 여백 제거 */
+#main-area {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* 하단 질문 영역 숨기기 */
+.question {
+  display: none !important;
+}
+
+.product-content h1 {
+  font-size: 42px;
+  margin-bottom: 60px;
+  color: #222;
+  font-weight: 600;
+}
+
+/* 제품 섹션 */
+.product-section {
+  margin-bottom: 60px;
+}
+
+/* 섹션 헤더 - 이미지와 동일한 스타일 */
+.section-header {
+  display: inline-block;
+  background-color: #5B7FDB;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  font-style: italic;
+  padding: 15px 30px;
+  border-radius: 8px;
+  margin-bottom: 40px;
+  letter-spacing: 0.5px;
+}
+
+/* 설명 텍스트 */
+.description-text {
+  font-size: 16px;
+  line-height: 1.9;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.description-text p {
+  margin-bottom: 20px;
+}
+
+.description-text strong {
+  font-weight: 700;
+  color: #000;
+}
+
+/* 별표 스타일 */
+.stars {
+  color: #000;
+  letter-spacing: 2px;
+}
+
+/* 테이블 스타일 - 이미지와 동일하게 */
+.product-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 40px 0;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.product-table thead {
+  background-color: #5B7FDB;
+  color: white;
+}
+
+.product-table th {
+  padding: 18px 15px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 15px;
+  border-right: 1px solid rgba(255,255,255,0.2);
+}
+
+.product-table th:last-child {
+  border-right: none;
+}
+
+.product-table tbody tr {
+  background-color: #fff;
+}
+
+.product-table tbody tr:nth-child(even) {
+  background-color: #E8EDF5;
+}
+
+.product-table td {
+  padding: 15px;
+  text-align: center;
+  border-right: 1px solid #ddd;
+  font-size: 14px;
+  color: #333;
+}
+
+.product-table td:last-child {
+  border-right: none;
+}
+
+/* 빨간색 텍스트 */
+.red-text {
+  color: #E74C3C;
+  font-weight: 600;
+}
+
+/* 검정색 텍스트 */
+.black-text {
+  color: #000;
+  font-weight: 600;
+}
+
+/* 제품명 열 스타일 */
+.product-name {
+  font-weight: 600;
+  text-align: left;
+  padding-left: 20px;
+}
+
+/* 주용도 열 넓이 조정 */
+.product-table td.wide-cell {
+  text-align: left;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* 사용 방법 열 */
+.product-table td.method-cell {
+  text-align: left;
+  padding-left: 15px;
+}
+
+/* 사용량 열 */
+.product-table td.amount-cell {
+  text-align: left;
+  padding-left: 15px;
+}
+
+/* 화살표 스타일 */
+.arrow {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+/* 다운로드 버튼 */
+.download-btn {
+  display: inline-block;
+  background-color: #666;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 15px 40px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  margin-top: 20px;
+}
+
+.download-btn:hover {
+  background-color: #555;
+}
+
+.download-btn i {
+  margin-right: 8px;
+}
+
+@media (max-width: 768px) {
+  .page-hero {
+    height: 300px;
+    margin-top: 70px;
+  }
+
+  .page-hero h2 {
+    font-size: 36px;
+  }
+
+  .product-content {
+    padding: 40px 20px 40px;
+  }
+
+  .product-content h1 {
+    font-size: 32px;
+  }
+
+  .section-header {
+    font-size: 18px;
+    padding: 12px 25px;
+  }
+
+  .description-text {
+    font-size: 15px;
+  }
+
+  .product-table {
+    font-size: 12px;
+  }
+
+  .product-table th,
+  .product-table td {
+    padding: 10px 8px;
+  }
+
+  .download-btn {
+    font-size: 14px;
+    padding: 12px 30px;
+  }
+
+  /* 모바일에서 테이블 스크롤 가능하게 */
+  .table-wrapper {
+    overflow-x: auto;
+  }
+
+  .product-table {
+    min-width: 800px;
+  }
+}

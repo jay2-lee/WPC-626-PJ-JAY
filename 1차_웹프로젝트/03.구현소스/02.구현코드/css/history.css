@@ -1,0 +1,133 @@
+/* history.html에서 분리된 연혁 페이지 전용 스타일 */
+
+/* 히어로 섹션 */
+.page-hero {
+  margin-top: 86px;
+  height: 400px;
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+              url('../images/banner/aboutus.png') center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.page-hero h2 {
+  color: white;
+  font-size: 48px;
+  font-weight: 600;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+/* 브레드크럼 */
+.breadcrumb {
+  max-width: 1200px;
+  margin: 40px auto 20px;
+  padding: 0 40px;
+  font-size: 14px;
+  color: #666;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.breadcrumb a {
+  color: #666;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  color: #5B7FDB;
+}
+
+/* 메인 컨텐츠 */
+.history-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 40px 60px;
+}
+
+/* 메인 영역 하단 여백 제거 */
+#main-area {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* 하단 질문 영역 숨기기 */
+.question {
+  display: none !important;
+}
+
+.history-content h1 {
+  font-size: 42px;
+  margin-bottom: 60px;
+  color: #222;
+  font-weight: 600;
+}
+
+/* 연혁 섹션 */
+.history-section {
+  margin-bottom: 50px;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 30px;
+}
+
+.history-section:last-child {
+  border-bottom: none;
+}
+
+.history-year {
+  font-size: 24px;
+  color: #5B7FDB;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.history-list {
+  list-style: none;
+  padding: 0;
+}
+
+.history-list li {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 12px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.history-list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #5B7FDB;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .page-hero {
+    height: 300px;
+    margin-top: 70px;
+  }
+
+  .page-hero h2 {
+    font-size: 36px;
+  }
+
+  .history-content {
+    padding: 40px 20px 40px;
+  }
+
+  .history-content h1 {
+    font-size: 32px;
+  }
+
+  .history-year {
+    font-size: 20px;
+  }
+
+  .history-list li {
+    font-size: 15px;
+  }
+}
