@@ -3,11 +3,6 @@
 import autoScroll from "./auto_scroll.js";
 import linksys from "./func/linksys.js";
 
-// Google 번역 스크립트 동적 삽입
-const translateScript = document.createElement('script');
-translateScript.src = '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
-document.head.appendChild(translateScript);
-
 const topArea = document.querySelector("#top-area");
 const bottomArea = document.querySelector("#bottom-area");
 
@@ -20,12 +15,56 @@ fetch("./inc/header.html")
   .then((data) => {
     topArea.innerHTML = data;
     initSearch();
+    initLang();
     $(".mob-menu-btn").click(function () {
       $(this).toggleClass("on");
       $(".menu-group").toggleClass("on");
     });
     linksys();
   });
+
+// 언어 선택 기능
+function initLang() {
+  const langBtn      = document.getElementById('langBtn');
+  const langDropdown = document.getElementById('langDropdown');
+
+  if (!langBtn || !langDropdown) {
+    console.log("langBtn 또는 langDropdown 없음!");
+    return;
+  }
+  console.log("langBtn 찾음!");
+
+  langBtn.addEventListener('click', function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+    console.log("langBtn 클릭됨!");
+    langDropdown.classList.toggle('active');
+  });
+
+  langDropdown.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      const lang = this.getAttribute('data-lang');
+      console.log("언어 선택:", lang);
+      langDropdown.classList.remove('active');
+
+      const currentUrl = encodeURIComponent(location.href);
+      if (lang === 'ko') {
+        location.href = location.href;
+      } else if (lang === 'en') {
+        location.href = 'https://translate.google.com/translate?hl=en&sl=ko&tl=en&u=' + currentUrl;
+      } else if (lang === 'ja') {
+        location.href = 'https://translate.google.com/translate?hl=ja&sl=ko&tl=ja&u=' + currentUrl;
+      }
+    });
+  });
+
+  document.addEventListener('click', function (e) {
+    if (!e.target.closest('.lang-selector')) {
+      langDropdown.classList.remove('active');
+    }
+  });
+}
 
 function initSearch() {
   const searchBtn     = document.getElementById('searchBtn');
