@@ -3,6 +3,11 @@
 import autoScroll from "./auto_scroll.js";
 import linksys from "./func/linksys.js";
 
+// Google 번역 스크립트 동적 삽입
+const translateScript = document.createElement('script');
+translateScript.src = '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+document.head.appendChild(translateScript);
+
 const topArea = document.querySelector("#top-area");
 const bottomArea = document.querySelector("#bottom-area");
 
