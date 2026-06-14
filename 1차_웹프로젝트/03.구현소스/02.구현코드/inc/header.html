@@ -1,7 +1,6 @@
 <!-- 1. 상단영역 -->
 <header class="top-area inbox">
   <h2 class="temp-tit blind">1. 상단영역</h2>
-  <!-- 상단영역 플렉스부모박스 : .cont-box -->
   <div class="cont-box">
     <!-- 1-1. 로고박스 -->
     <section class="logo-box">
@@ -13,14 +12,11 @@
     </section>
     <!-- 1-2. 메뉴박스 -->
     <section class="menu-box">
-      <!-- 메뉴박스하위 메뉴그룹박스 -->
       <div class="menu-group">
-        <!-- 1-2-2. GNB메뉴 -->
         <nav class="gnb-menu">
           <ul>
             <li>
               <a href="#">회사소개</a>
-              <!-- 서브메뉴박스 -->
               <article class="sub-menu">
                 <div class="padding-box">
                   <ul>
@@ -34,7 +30,6 @@
             </li>
             <li>
               <a href="#">PET RESIN(Huvis)</a>
-              <!-- 서브메뉴박스 -->
               <article class="sub-menu">
                 <div class="padding-box">
                   <ul>
@@ -46,7 +41,6 @@
             </li>
             <li>
               <a href="#">RECYLED원료</a>
-              <!-- 서브메뉴박스 -->
               <article class="sub-menu">
                 <div class="padding-box">
                   <ul>
@@ -57,7 +51,6 @@
             </li>
             <li>
               <a href="#">신소재</a>
-              <!-- 서브메뉴박스 -->
               <article class="sub-menu">
                 <div class="padding-box">
                   <ul>
@@ -66,14 +59,12 @@
                     <li><a href="taste_enhancer.html">식미개선제_밥맛향상제</a></li>
                     <li><a href="washing_durability.html">세탁내구성 향상가공제</a></li>
                     <li><a href="formaldehyde.html">포름알데히드 캐쳐제</a></li>
-                   
                   </ul>
                 </div>
               </article>
             </li>
             <li>
               <a href="#">고객센터</a>
-              <!-- 서브메뉴박스 -->
               <article class="sub-menu">
                 <div class="padding-box">
                   <ul>
@@ -86,26 +77,23 @@
         </nav>
       </div>
     </section>
-    <!-- 1-3. 박스 -->
+    <!-- 1-3. 기타박스 -->
     <section class="etc-box">
       <!-- 검색 버튼 -->
       <a href="#" class="search-btn" id="searchBtn">
         <img src="./images/banner/mirroricon.png" alt="검색" />
       </a>
-      
       <!-- 언어 선택 버튼 -->
       <div class="lang-selector">
         <a href="#" class="lang-btn" id="langBtn">
           <img src="./images/banner/global.png" alt="언어선택" />
         </a>
-        <!-- 언어 드롭다운 -->
         <div class="lang-dropdown" id="langDropdown">
           <a href="#" data-lang="ko">한국어</a>
           <a href="#" data-lang="en">English</a>
           <a href="#" data-lang="ja">日本語</a>
         </div>
       </div>
-      
       <!-- 모바일 메뉴 버튼 -->
       <a href="#" class="mob-menu-btn">
         <i class="fa-solid fa-bars"></i>
@@ -113,7 +101,7 @@
       </a>
     </section>
   </div>
-  
+ 
   <!-- 검색 오버레이 -->
   <div class="search-overlay" id="searchOverlay">
     <div class="search-container">
@@ -121,10 +109,10 @@
         <i class="fa-solid fa-times"></i>
       </button>
       <form class="search-form" id="searchForm">
-        <input 
-          type="text" 
-          class="search-input" 
-          placeholder="검색어를 입력하세요..." 
+        <input
+          type="text"
+          class="search-input"
+          placeholder="검색어를 입력하세요..."
           id="searchInput"
         />
         <button type="submit" class="search-submit">
@@ -133,8 +121,11 @@
       </form>
     </div>
   </div>
+ 
+  <!-- Google 번역 위젯 (숨김) -->
+  <div id="google_translate_element" style="display:none;"></div>
 </header>
-
+ 
 <style>
 /* 검색 오버레이 */
 .search-overlay {
@@ -151,18 +142,15 @@
   opacity: 0;
   transition: opacity 0.3s;
 }
-
 .search-overlay.active {
   display: flex;
   opacity: 1;
 }
-
 .search-container {
   position: relative;
   width: 90%;
   max-width: 600px;
 }
-
 .search-close {
   position: absolute;
   top: -50px;
@@ -174,16 +162,13 @@
   cursor: pointer;
   transition: transform 0.3s;
 }
-
 .search-close:hover {
   transform: rotate(90deg);
 }
-
 .search-form {
   display: flex;
   gap: 10px;
 }
-
 .search-input {
   flex: 1;
   padding: 20px 30px;
@@ -195,16 +180,13 @@
   outline: none;
   transition: all 0.3s;
 }
-
 .search-input::placeholder {
   color: rgba(255, 255, 255, 0.6);
 }
-
 .search-input:focus {
   background: rgba(255, 255, 255, 0.2);
   border-color: #5B7FDB;
 }
-
 .search-submit {
   width: 60px;
   height: 60px;
@@ -216,17 +198,15 @@
   cursor: pointer;
   transition: all 0.3s;
 }
-
 .search-submit:hover {
   background: #4A6BC9;
   transform: scale(1.1);
 }
-
+ 
 /* 언어 선택 */
 .lang-selector {
   position: relative;
 }
-
 .lang-dropdown {
   position: absolute;
   top: 100%;
@@ -240,11 +220,9 @@
   min-width: 120px;
   z-index: 1000;
 }
-
 .lang-dropdown.active {
   display: block;
 }
-
 .lang-dropdown a {
   display: block;
   padding: 12px 20px;
@@ -253,124 +231,169 @@
   font-size: 14px;
   transition: background 0.3s;
 }
-
 .lang-dropdown a:hover {
   background: #f0f0f0;
 }
-
 .lang-dropdown a.active {
   background: #5B7FDB;
   color: white;
 }
+ 
+/* Google 번역 툴바 숨기기 */
+.goog-te-banner-frame,
+.skiptranslate {
+  display: none !important;
+}
+body {
+  top: 0 !important;
+}
 </style>
-
+ 
 <script>
-// 검색 기능
-document.addEventListener('DOMContentLoaded', function() {
-  const searchBtn = document.getElementById('searchBtn');
+/* =============================================
+   Google 번역 초기화 (전역함수 - 자동 호출됨)
+============================================= */
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement(
+    {
+      pageLanguage: 'ko',
+      includedLanguages: 'ko,en,ja',
+      autoDisplay: false,
+    },
+    'google_translate_element'
+  );
+ 
+  // 현재 언어 상태를 드롭다운에 반영
+  const cookieLang = getCookie('googtrans');
+  let activeLang = 'ko';
+  if (cookieLang) {
+    const parts = cookieLang.split('/');
+    activeLang = parts[parts.length - 1] || 'ko';
+  }
+  document.querySelectorAll('.lang-dropdown a').forEach(link => {
+    link.classList.toggle('active', link.getAttribute('data-lang') === activeLang);
+  });
+}
+ 
+/* =============================================
+   번역 적용 함수
+============================================= */
+function applyTranslation(lang) {
+  if (lang === 'ko') {
+    eraseCookie('googtrans');
+  } else {
+    setCookie('googtrans', '/ko/' + lang);
+  }
+  location.reload();
+}
+ 
+/* =============================================
+   쿠키 유틸 함수
+============================================= */
+function setCookie(name, value) {
+  document.cookie = name + '=' + value + '; path=/';
+  document.cookie = name + '=' + value + '; path=/; domain=' + location.hostname;
+}
+function eraseCookie(name) {
+  document.cookie = name + '=; path=/; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+  document.cookie = name + '=; path=/; domain=' + location.hostname + '; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+}
+function getCookie(name) {
+  const match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+  return match ? match[2] : null;
+}
+ 
+/* =============================================
+   검색 + 언어 선택 이벤트
+============================================= */
+document.addEventListener('DOMContentLoaded', function () {
+ 
+  // ── 검색 기능 ──────────────────────────
+  const searchBtn     = document.getElementById('searchBtn');
   const searchOverlay = document.getElementById('searchOverlay');
-  const searchClose = document.getElementById('searchClose');
-  const searchForm = document.getElementById('searchForm');
-  const searchInput = document.getElementById('searchInput');
-
-  // 검색 열기
+  const searchClose   = document.getElementById('searchClose');
+  const searchForm    = document.getElementById('searchForm');
+  const searchInput   = document.getElementById('searchInput');
+ 
   if (searchBtn) {
-    searchBtn.addEventListener('click', function(e) {
+    searchBtn.addEventListener('click', function (e) {
       e.preventDefault();
       searchOverlay.classList.add('active');
       setTimeout(() => searchInput.focus(), 300);
     });
   }
-
-  // 검색 닫기
   if (searchClose) {
-    searchClose.addEventListener('click', function(e) {
+    searchClose.addEventListener('click', function (e) {
       e.preventDefault();
       searchOverlay.classList.remove('active');
       searchInput.value = '';
     });
   }
-
-  // ESC 키로 닫기
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape' && searchOverlay.classList.contains('active')) {
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && searchOverlay && searchOverlay.classList.contains('active')) {
       searchOverlay.classList.remove('active');
       searchInput.value = '';
     }
   });
-
-  // 오버레이 클릭 시 닫기
-  searchOverlay.addEventListener('click', function(e) {
-    if (e.target === searchOverlay) {
-      searchOverlay.classList.remove('active');
-      searchInput.value = '';
-    }
-  });
-
-  // 검색 실행
+  if (searchOverlay) {
+    searchOverlay.addEventListener('click', function (e) {
+      if (e.target === searchOverlay) {
+        searchOverlay.classList.remove('active');
+        searchInput.value = '';
+      }
+    });
+  }
   if (searchForm) {
-    searchForm.addEventListener('submit', function(e) {
+    searchForm.addEventListener('submit', function (e) {
       e.preventDefault();
       const query = searchInput.value.trim();
       if (query) {
         alert('검색어: ' + query + '\n(실제 검색 기능은 서버 연동이 필요합니다)');
-        // 실제 구현 시: location.href = 'search.html?q=' + encodeURIComponent(query);
       }
     });
   }
-
-  // 언어 선택 기능
-  const langBtn = document.getElementById('langBtn');
+ 
+  // ── 언어 선택 드롭다운 ──────────────────
+  const langBtn      = document.getElementById('langBtn');
   const langDropdown = document.getElementById('langDropdown');
-
-  // 언어 버튼 클릭
+ 
   if (langBtn) {
-    langBtn.addEventListener('click', function(e) {
+    langBtn.addEventListener('click', function (e) {
       e.preventDefault();
       e.stopPropagation();
       langDropdown.classList.toggle('active');
     });
   }
-
-  // 언어 선택
+ 
   if (langDropdown) {
     const langLinks = langDropdown.querySelectorAll('a');
     langLinks.forEach(link => {
-      link.addEventListener('click', function(e) {
+      link.addEventListener('click', function (e) {
         e.preventDefault();
         const lang = this.getAttribute('data-lang');
-        
-        // 모든 언어 링크에서 active 클래스 제거
+ 
+        // active 표시 변경
         langLinks.forEach(l => l.classList.remove('active'));
-        // 선택된 언어에 active 클래스 추가
         this.classList.add('active');
-        
-        // 언어 변경 처리
-        localStorage.setItem('selectedLang', lang);
-        alert('언어가 ' + this.textContent + '(으)로 변경되었습니다.\n(실제 다국어 기능은 추가 구현이 필요합니다)');
-        
+ 
+        // 드롭다운 닫기
         langDropdown.classList.remove('active');
-        
-        // 실제 구현 시 페이지 언어 변경 처리
-        // location.href = location.pathname + '?lang=' + lang;
+ 
+        // 번역 실행
+        applyTranslation(lang);
       });
     });
   }
-
-  // 문서 클릭 시 드롭다운 닫기
-  document.addEventListener('click', function(e) {
+ 
+  // 외부 클릭 시 드롭다운 닫기
+  document.addEventListener('click', function (e) {
     if (langDropdown && !e.target.closest('.lang-selector')) {
       langDropdown.classList.remove('active');
     }
   });
-
-  // 저장된 언어 설정 불러오기
-  const savedLang = localStorage.getItem('selectedLang') || 'ko';
-  const langLinks = document.querySelectorAll('.lang-dropdown a');
-  langLinks.forEach(link => {
-    if (link.getAttribute('data-lang') === savedLang) {
-      link.classList.add('active');
-    }
-  });
 });
 </script>
+ 
+<!-- Google 번역 스크립트 -->
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+ 
