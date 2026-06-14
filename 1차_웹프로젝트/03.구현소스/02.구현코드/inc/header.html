@@ -304,56 +304,11 @@ function getCookie(name) {
 }
  
 /* =============================================
-   검색 + 언어 선택 이벤트
+   언어 선택 초기화 함수
+   - DOMContentLoaded 대신 직접 실행
+   - fetch로 동적 로드되므로 즉시 실행해야 함!
 ============================================= */
-document.addEventListener('DOMContentLoaded', function () {
- 
-  // ── 검색 기능 ──────────────────────────
-  const searchBtn     = document.getElementById('searchBtn');
-  const searchOverlay = document.getElementById('searchOverlay');
-  const searchClose   = document.getElementById('searchClose');
-  const searchForm    = document.getElementById('searchForm');
-  const searchInput   = document.getElementById('searchInput');
- 
-  if (searchBtn) {
-    searchBtn.addEventListener('click', function (e) {
-      e.preventDefault();
-      searchOverlay.classList.add('active');
-      setTimeout(() => searchInput.focus(), 300);
-    });
-  }
-  if (searchClose) {
-    searchClose.addEventListener('click', function (e) {
-      e.preventDefault();
-      searchOverlay.classList.remove('active');
-      searchInput.value = '';
-    });
-  }
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape' && searchOverlay && searchOverlay.classList.contains('active')) {
-      searchOverlay.classList.remove('active');
-      searchInput.value = '';
-    }
-  });
-  if (searchOverlay) {
-    searchOverlay.addEventListener('click', function (e) {
-      if (e.target === searchOverlay) {
-        searchOverlay.classList.remove('active');
-        searchInput.value = '';
-      }
-    });
-  }
-  if (searchForm) {
-    searchForm.addEventListener('submit', function (e) {
-      e.preventDefault();
-      const query = searchInput.value.trim();
-      if (query) {
-        alert('검색어: ' + query + '\n(실제 검색 기능은 서버 연동이 필요합니다)');
-      }
-    });
-  }
- 
-  // ── 언어 선택 드롭다운 ──────────────────
+function initLang() {
   const langBtn      = document.getElementById('langBtn');
   const langDropdown = document.getElementById('langDropdown');
  
@@ -371,15 +326,9 @@ document.addEventListener('DOMContentLoaded', function () {
       link.addEventListener('click', function (e) {
         e.preventDefault();
         const lang = this.getAttribute('data-lang');
- 
-        // active 표시 변경
         langLinks.forEach(l => l.classList.remove('active'));
         this.classList.add('active');
- 
-        // 드롭다운 닫기
         langDropdown.classList.remove('active');
- 
-        // 번역 실행
         applyTranslation(lang);
       });
     });
@@ -391,9 +340,11 @@ document.addEventListener('DOMContentLoaded', function () {
       langDropdown.classList.remove('active');
     }
   });
-});
+}
+ 
+// 즉시 실행 (DOMContentLoaded 없이!)
+initLang();
 </script>
  
 <!-- Google 번역 스크립트 -->
 <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
- 
