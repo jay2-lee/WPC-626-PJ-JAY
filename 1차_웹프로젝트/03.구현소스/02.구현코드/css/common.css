@@ -1,6 +1,6 @@
 @charset "utf-8";
 /* ERUSAM 공통 CSS - common.css */
-
+ 
 /***************** 1. 상단영역 *****************/
 /* 상단영역 최상위 부모박스 */
 #top-area {
@@ -36,12 +36,12 @@
 .etc-box a img {
   width: 37px;
 }
-
+ 
 /* 메뉴박스 */
 .menu-box {
   padding-right: 10px;
 }
-
+ 
 /* 메뉴그룹 플렉스 */
 .menu-group {
   display: flex;
@@ -69,13 +69,13 @@
   height: 0;
   background-color: rgba(255, 255, 255, 0.8);
   z-index: -1;
-
+ 
   /* 트랜지션 */
   transition: 0.4s ease-out;
 }
-
+ 
 .gnb-menu:hover::before {
-  height: 350px;
+  height: 420px;
 }
 .gnb-menu > ul {
   font-size: 1.8rem;
@@ -85,7 +85,7 @@
   position: relative;
   /* 부모자격 */
 }
-
+ 
 /* 서브메뉴 */
 .sub-menu {
   position: absolute;
@@ -101,25 +101,25 @@
     -> 단, 여기에 위아래 패딩을 줄 경우 숨겨지지 않는다! */
   height: 0;
   /* 처음에 최대높이값 셋팅필수! 그래야 트랜지션 먹음! */
-
+ 
   text-align: center;
-
+ 
   /* 트랜지션 */
   transition: 0.4s ease-out;
 }
 /* 부모 li에 마우스 오버시 .sub-menu 높이값 변경하기 */
 .gnb-menu:hover > ul > li .sub-menu {
-  height: 350px;
+  height: 420px;
   /* 최대 높이값을 컨텐츠 높이값 보다 좀 더 크게 잡으면
     오버시 높이값이 내용만큼만 커지게 된다! */
 }
-
+ 
 /* 패딩만 내부에 다른 블록요소를 사용함!
 -> 자식요소 숨기기 부모박스엔 패딩을 줄 수 없다! */
 .padding-box {
   margin-top: 50px;
 }
-
+ 
 /* 타이틀 바 */
 .title-bar {
   display: flex;
@@ -134,17 +134,17 @@
   flex-direction: column;
   line-height: 4;
   border-radius: 20px;
-
+ 
   /* 글자크기 */
   font-size: 1.6rem;
 }
-
+ 
 /* 모바일 메뉴 버튼 */
 .mob-menu-btn {
   font-size: 30px;
   display: none;
 }
-
+ 
 /***************** 3. 하단영역 *****************/
 .bottom-area {
   position: relative;
@@ -177,7 +177,7 @@
   background-color: #000;
   color: #fff;
 }
-
+ 
 /* 하단링크 */
 .link-bar ul {
   display: flex;
@@ -221,18 +221,18 @@
   opacity: 0;
   transition: opacity 0.3s;
 }
-
+ 
 .search-overlay.active {
   display: flex;
   opacity: 1;
 }
-
+ 
 .search-container {
   position: relative;
   width: 90%;
   max-width: 600px;
 }
-
+ 
 .search-close {
   position: absolute;
   top: -50px;
@@ -244,16 +244,16 @@
   cursor: pointer;
   transition: transform 0.3s;
 }
-
+ 
 .search-close:hover {
   transform: rotate(90deg);
 }
-
+ 
 .search-form {
   display: flex;
   gap: 10px;
 }
-
+ 
 .search-input {
   flex: 1;
   padding: 20px 30px;
@@ -265,16 +265,16 @@
   outline: none;
   transition: all 0.3s;
 }
-
+ 
 .search-input::placeholder {
   color: rgba(255, 255, 255, 0.6);
 }
-
+ 
 .search-input:focus {
   background: rgba(255, 255, 255, 0.2);
   border-color: #5b7fdb;
 }
-
+ 
 .search-submit {
   width: 60px;
   height: 60px;
@@ -286,17 +286,17 @@
   cursor: pointer;
   transition: all 0.3s;
 }
-
+ 
 .search-submit:hover {
   background: #4a6bc9;
   transform: scale(1.1);
 }
-
+ 
 /* 언어 선택 */
 .lang-selector {
   position: relative;
 }
-
+ 
 .lang-dropdown {
   position: absolute;
   top: 100%;
@@ -310,11 +310,11 @@
   min-width: 120px;
   z-index: 1000;
 }
-
+ 
 .lang-dropdown.active {
   display: block;
 }
-
+ 
 .lang-dropdown a {
   display: block;
   padding: 12px 20px;
@@ -323,11 +323,11 @@
   font-size: 14px;
   transition: background 0.3s;
 }
-
+ 
 .lang-dropdown a:hover {
   background: #f0f0f0;
 }
-
+ 
 .lang-dropdown a.active {
   background: #5b7fdb;
   color: white;
@@ -342,7 +342,7 @@
   gap: 15px;
   z-index: 9998;
 }
-
+ 
 .scroll-btn {
   width: 70px;
   height: 70px;
@@ -359,24 +359,24 @@
   justify-content: center;
   backdrop-filter: blur(5px);
 }
-
+ 
 .scroll-btn:hover {
   background-color: rgba(74, 107, 201, 0.9);
   transform: translateY(-3px);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
 }
-
+ 
 .scroll-btn.scroll-top {
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s;
 }
-
+ 
 .scroll-btn.scroll-top.show {
   opacity: 1;
   visibility: visible;
 }
-
+ 
 /* 1080px 이하 미디어쿼리 시작 */
 @media screen and (max-width: 1200px) {
   /* 없어지는 요소들 */
@@ -400,7 +400,7 @@
   .mob-menu-btn.on i:nth-child(2) {
     display: block;
   }
-
+ 
   /* 서브메뉴 변경 */
   .menu-group .gnb-menu {
     position: fixed;
@@ -415,7 +415,7 @@
   .menu-group.on .gnb-menu {
     left: 0%;
   }
-
+ 
   .gnb-menu > ul {
     flex-direction: column;
     /* justify-content: center; */
@@ -424,40 +424,40 @@
     padding: 5vw;
     box-sizing: border-box;
   }
-
+ 
   .sub-menu {
     position: static;
     translate: none;
     height: auto;
     max-height: 0;
   }
-
+ 
   .padding-box {
     margin-top: 0;
   }
-
+ 
   .sub-menu ul {
     font-size: 2.5vh;
     line-height: 1.7;
   }
-
+ 
   .gnb-menu:hover > ul > li .sub-menu {
     width: auto;
     height: auto;
     text-align: left;
   }
-
+ 
   .gnb-menu > ul > li:hover .sub-menu {
     max-height: 200px;
   }
-
+ 
   .gnb-menu > ul > li .sub-menu {
     max-height: 0;
     height: auto;
   }
 }
 /* 1200px 이하 미디어쿼리 종료 */
-
+ 
 @media (max-width: 768px) {
   .etc-box {
     gap: 6px;
@@ -467,7 +467,7 @@
     right: 15px;
     bottom: 15px;
   }
-
+ 
   .scroll-btn {
     width: 55px;
     height: 55px;
