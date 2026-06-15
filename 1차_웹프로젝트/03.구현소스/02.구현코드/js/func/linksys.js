@@ -43,6 +43,7 @@ export default () => {
         case "식미개선제_밥맛향상제":  location.href = "taste_enhancer.html"; break;
         case "세탁내구성 향상가공제":  location.href = "washing_durability.html"; break;
         case "포름알데히드 캐쳐제":   location.href = "formaldehyde.html"; break;
+        case "소취/항균제(DEOGUARD)": location.href = "deoguard.html"; break;
         case "고객센터":              location.href = "contact.html"; break;
  
         // ── English ─────────────────────────────
@@ -57,6 +58,7 @@ export default () => {
         case "Taste Enhancer":           location.href = "taste_enhancer_en.html"; break;
         case "Washing Durability Agent": location.href = "washing_durability_en.html"; break;
         case "Formaldehyde Catcher":     location.href = "formaldehyde_en.html"; break;
+        case "Deodorizing/Antibacterial(DEOGUARD)": location.href = "deoguard_en.html"; break;
         case "Contact Us":               location.href = "contact_en.html"; break;
  
         // ── 日本語 ───────────────────────────────
@@ -71,6 +73,7 @@ export default () => {
         case "食味改善剤":                  location.href = "taste_enhancer_ja.html"; break;
         case "洗濯耐久性向上加工剤":        location.href = "washing_durability_ja.html"; break;
         case "ホルムアルデヒドキャッチャー": location.href = "formaldehyde_ja.html"; break;
+        case "消臭/抗菌剤(DEOGUARD)":      location.href = "deoguard_ja.html"; break;
         case "お問い合わせ":                location.href = "contact_ja.html"; break;
  
         // ── 언어 공통 (DURASIL) ─────────────────
