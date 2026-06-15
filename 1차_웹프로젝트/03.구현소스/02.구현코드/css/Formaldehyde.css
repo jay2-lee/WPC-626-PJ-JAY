@@ -73,6 +73,8 @@
 /* 섹션 헤더 - Formaldehyde.css와 동일한 스타일 */
 .section-header {
   display: inline-block;
+  width: fit-content;
+  align-self: flex-start;
   background-color: #5B7FDB;
   color: white;
   font-size: 20px;
