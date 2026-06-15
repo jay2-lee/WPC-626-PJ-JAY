@@ -70,19 +70,18 @@
   margin-bottom: 80px;
 }
  
- 
-/* 섹션 헤더 (파란색 박스) */
+/* 섹션 헤더 - Formaldehyde.css와 동일한 스타일 */
 .section-header {
   display: inline-block;
-  background: linear-gradient(135deg, #5b7fdb, #4a6bc9);
+  background-color: #5B7FDB;
   color: white;
-  font-size: 16px;
-  font-weight: 700;
-  padding: 12px 30px;
-  border-radius: 30px;
-  margin-bottom: 30px;
-  letter-spacing: 1px;
-  box-shadow: 0 4px 15px rgba(91, 127, 219, 0.4);
+  font-size: 20px;
+  font-weight: 600;
+  font-style: italic;
+  padding: 15px 30px;
+  border-radius: 8px;
+  margin-bottom: 40px;
+  letter-spacing: 0.5px;
 }
  
 /* 제품 이미지 영역 */
