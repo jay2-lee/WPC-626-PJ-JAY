@@ -41,9 +41,10 @@ export default () => {
         case "RECYCLED원료":          location.href = "recycled.html"; break;
         case "항균제(은나노 외)":     location.href = "antibacterial.html"; break;
         case "커큐민":                location.href = "taste_enhancer.html"; break;
-        case "방축가공제(MS-450/MX-27N)": location.href = "washing_durability.html"; break;
+        case "방축가공제":            location.href = "washing_durability.html"; break;
         case "포름알데히드 캐쳐제":   location.href = "formaldehyde.html"; break;
         case "소취/항균제(DEOGUARD)": location.href = "deoguard.html"; break;
+        case "비불소계발수제":         location.href = "ecoguard_wr.html"; break;
         case "고객센터":              location.href = "contact.html"; break;
  
         // ── English ─────────────────────────────
@@ -56,9 +57,10 @@ export default () => {
         case "RECYCLED Material":        location.href = "recycled_en.html"; break;
         case "Antibacterial Agent(Silver Nano & Others)": location.href = "antibacterial_en.html"; break;
         case "Curcumin":                 location.href = "taste_enhancer_en.html"; break;
-        case "Anti-shrink Agent(MS-450/MX-27N)": location.href = "washing_durability_en.html"; break;
+        case "Anti-shrink Agent":        location.href = "washing_durability_en.html"; break;
         case "Formaldehyde Catcher":     location.href = "formaldehyde_en.html"; break;
         case "Deodorizing/Antibacterial(DEOGUARD)": location.href = "deoguard_en.html"; break;
+        case "Non-fluorinated Water Repellent": location.href = "ecoguard_wr_en.html"; break;
         case "Contact Us":               location.href = "contact_en.html"; break;
  
         // ── 日本語 ───────────────────────────────
@@ -71,9 +73,10 @@ export default () => {
         case "リサイクル原料":              location.href = "recycled_ja.html"; break;
         case "抗菌剤(銀ナノ他)":            location.href = "antibacterial_ja.html"; break;
         case "クルクミン":                  location.href = "taste_enhancer_ja.html"; break;
-        case "防縮加工剤(MS-450/MX-27N)": location.href = "washing_durability_ja.html"; break;
+        case "防縮加工剤":                  location.href = "washing_durability_ja.html"; break;
         case "ホルムアルデヒドキャッチャー": location.href = "formaldehyde_ja.html"; break;
         case "消臭/抗菌剤(DEOGUARD)":      location.href = "deoguard_ja.html"; break;
+        case "非フッ素系防水加工剤":        location.href = "ecoguard_wr_ja.html"; break;
         case "お問い合わせ":                location.href = "contact_ja.html"; break;
  
         // ── 언어 공통 (DURASIL) ─────────────────
