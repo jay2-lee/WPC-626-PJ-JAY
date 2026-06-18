@@ -40,6 +40,7 @@ export default () => {
         case "PET JSB194(액상 Chip)": location.href = "pet_jsb194.html"; break;
         case "RECYCLED원료":          location.href = "recycled.html"; break;
         case "항균제(은나노 외)":     location.href = "antibacterial.html"; break;
+        case "내마모성,슬립성 향상제": location.href = "durasil.html"; break;
         case "커큐민":                location.href = "taste_enhancer.html"; break;
         case "방축가공제":            location.href = "washing_durability.html"; break;
         case "포름알데히드 캐쳐제":   location.href = "formaldehyde.html"; break;
@@ -56,6 +57,7 @@ export default () => {
         case "PET JSB194(Liquid Chip)":  location.href = "pet_jsb194_en.html"; break;
         case "RECYCLED Material":        location.href = "recycled_en.html"; break;
         case "Antibacterial Agent(Silver Nano & Others)": location.href = "antibacterial_en.html"; break;
+        case "Wear & Slip Resistance Agent": location.href = "durasil_en.html"; break;
         case "Curcumin":                 location.href = "taste_enhancer_en.html"; break;
         case "Anti-shrink Agent":        location.href = "washing_durability_en.html"; break;
         case "Formaldehyde Catcher":     location.href = "formaldehyde_en.html"; break;
@@ -72,6 +74,7 @@ export default () => {
         case "PET JSB194(液相チップ)":      location.href = "pet_jsb194_ja.html"; break;
         case "リサイクル原料":              location.href = "recycled_ja.html"; break;
         case "抗菌剤(銀ナノ他)":            location.href = "antibacterial_ja.html"; break;
+        case "耐摩耗性・スリップ性向上剤":  location.href = "durasil_ja.html"; break;
         case "クルクミン":                  location.href = "taste_enhancer_ja.html"; break;
         case "防縮加工剤":                  location.href = "washing_durability_ja.html"; break;
         case "ホルムアルデヒドキャッチャー": location.href = "formaldehyde_ja.html"; break;
@@ -79,12 +82,6 @@ export default () => {
         case "非フッ素系防水加工剤":        location.href = "ecoguard_wr_ja.html"; break;
         case "お問い合わせ":                location.href = "contact_ja.html"; break;
  
-        // ── 언어 공통 (DURASIL) ─────────────────
-        case "DURASIL":
-          if      (lang === "en") location.href = "durasil_en.html";
-          else if (lang === "ja") location.href = "durasil_ja.html";
-          else                    location.href = "durasil.html";
-          break;
       }
     });
   });
