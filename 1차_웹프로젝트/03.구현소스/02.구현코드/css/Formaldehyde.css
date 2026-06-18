@@ -198,6 +198,60 @@
   margin-right: 5px;
 }
  
+/* 2단 그룹 그리드 (예: MS-450 / MX-27N 같은 제품 타입별 KEY FEATURES) */
+.feature-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+ 
+.feature-group {
+  background-color: #F4F6FB;
+  border-radius: 12px;
+  padding: 30px;
+}
+ 
+.feature-group-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #5B7FDB;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #5B7FDB;
+}
+ 
+.feature-group ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+ 
+.feature-group ul li {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 14px;
+  padding-left: 18px;
+  position: relative;
+}
+ 
+.feature-group ul li:last-child {
+  margin-bottom: 0;
+}
+ 
+.feature-group ul li::before {
+  content: "•";
+  color: #5B7FDB;
+  font-weight: 700;
+  position: absolute;
+  left: 0;
+}
+ 
+.feature-group ul li strong {
+  font-weight: 700;
+  color: #000;
+}
+ 
 /* 다운로드 버튼 */
 .download-btn {
   display: inline-block;
@@ -268,6 +322,16 @@
  
   .product-table {
     min-width: 800px;
+  }
+ 
+  /* 모바일에서 2단 그리드 → 1단으로 전환 */
+  .feature-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+ 
+  .feature-group {
+    padding: 20px;
   }
 }
  
