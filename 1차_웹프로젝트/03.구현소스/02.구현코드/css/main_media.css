@@ -41,3 +41,92 @@
 @media screen and (max-width: 1080px) {
 }
 /* 1080px 이하 미디어쿼리 종료 */
+ 
+/* ===== 모바일(768px 이하) 전용 ===== */
+@media screen and (max-width: 768px) {
+ 
+  /* ── PRODUCT 파트: 아이콘 박스 중앙 + 글씨 크기 ── */
+  .product-part .icon-box {
+    left: 50%;
+    right: auto;
+    top: 50%;
+    translate: -50% -50%;
+    width: 55vw;
+  }
+ 
+  /* 아이콘 타이틀 (h2: 위쪽 글씨, 예: 포름알데히드, 향균제 등) */
+  .product-part .icon-box li h2 {
+    font-size: 4.5vw;
+  }
+ 
+  /* 아이콘 설명 (h3: 아래쪽 글씨, 예: 캐쳐제, 밥맛향상제 등) */
+  .product-part .icon-box li h3 {
+    font-size: 5.5vw;
+  }
+ 
+  /* 위아래 버튼 위치 조정 */
+  .btn-grp {
+    right: 4vw;
+    top: 50%;
+    translate: 0 -50%;
+  }
+ 
+  /* ── ABOUT US 파트: 동그라미 박스 중앙 + 설명글 하단 배치 ── */
+  .aboutus-part {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+  }
+ 
+  /* 섹션 타이틀 */
+  .aboutus-part .tit {
+    position: relative;
+    translate: none;
+    width: 100%;
+    height: auto;
+    line-height: normal;
+    padding: 20px 0 10px;
+    flex-shrink: 0;
+    order: 0;
+  }
+ 
+  /* 동그라미 박스 중앙 정렬 */
+  .aboutus-part .icon-box {
+    position: relative;
+    top: auto;
+    right: auto;
+    translate: none;
+    width: 140px;
+    height: 140px;
+    margin: 10px auto 80px;
+    flex-shrink: 0;
+    order: 1;
+  }
+ 
+  .aboutus-part .icon-box li {
+    top: -15px;
+  }
+ 
+  /* About us 글자 크기 */
+  .aboutus-part .icon-box li h4 {
+    font-size: 1.8rem;
+  }
+ 
+  /* 동그라미 간격 모바일 축소 */
+  .aboutus-part .icon-box li:nth-child(1) {
+    translate: 0 -16vmin;
+  }
+  .aboutus-part .icon-box li:nth-child(2) {
+    translate: 14vmin 0;
+  }
+  .aboutus-part .icon-box li:nth-child(3) {
+    translate: 0 16vmin;
+  }
+  .aboutus-part .icon-box li:nth-child(4) {
+    translate: -14vmin 0;
+  }
+}
+/* ===== 모바일(768px 이하) 전용 종료 ===== */
+ 
