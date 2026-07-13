@@ -1,8 +1,8 @@
 @charset "UTF-8";
- 
+
 /* 메인 미디어쿼리 */
- 
-/* 1080px 이하 미디어쿼리 시작 */
+
+/* 1200px 이하 미디어쿼리 시작 */
 @media screen and (max-width: 1200px) {
   
   /* 타이틀 공통 변경 */
@@ -23,60 +23,93 @@
     width: 100%;
     height: 100%;
   }
- 
+
   .btn-grp {
     translate: 0 0;
   }
- 
- 
+
+
 }
 /* 1200px 이하 미디어쿼리 종료 */
- 
+
 /* 1080px 이하 미디어쿼리 시작 */
 @media screen and (max-width: 1080px) {
 }
 /* 1080px 이하 미디어쿼리 종료 */
- 
-/* 1080px 이하 미디어쿼리 시작 */
-@media screen and (max-width: 1080px) {
-}
-/* 1080px 이하 미디어쿼리 종료 */
- 
+
 /* ===== 모바일(768px 이하) 전용 ===== */
 @media screen and (max-width: 768px) {
- 
+
+  /* ── 배너 파트 ── */
+
+  .banner-slide h2 {
+    bottom: 12vh;
+    left: 6vw;
+    right: 6vw;
+    font-size: 26px;
+    line-height: 1.4;
+  }
+
+  .banner-slide h2 b {
+    font-size: 32px;
+  }
+
+  .abtn-grp {
+    bottom: 4vh;
+    width: 26vw;
+    left: 6vw;
+  }
+
+  .ab1 {
+    left: 0;
+  }
+
+  .ab2 {
+    left: 80px;
+  }
+
   /* ── PRODUCT 파트 ── */
- 
+
   /* 아이콘 박스: 화면 정중앙 배치, 크기 모바일 비율에 맞게 */
   .product-part .icon-box {
     left: 50%;
     right: auto;
-    top: 50%;
+    top: 45%;
     translate: -50% -50%;
-    width: 42vw;       /* 모바일 화면 비율에 맞게 축소 */
+    width: 45vw;       /* 모바일 화면 비율에 맞게 축소 */
     aspect-ratio: 1.2;
   }
- 
+
   /* 아이콘 타이틀 h2 (위쪽 글씨): 기존 1vw → 4.2vw (비율 유지하며 크게) */
   .product-part .icon-box li h2 {
     font-size: 4.2vw;
   }
- 
+
   /* 아이콘 설명 h3 (아래쪽 글씨): 기존 1.5vw → 5.2vw (h2 대비 동일 비율 유지) */
   .product-part .icon-box li h3 {
     font-size: 5.2vw;
   }
- 
-  /* 위아래 버튼: 아이콘 박스와 겹치지 않도록 오른쪽 끝에 고정 */
+
+  /* 위아래 버튼: 아이콘 박스와 겹치지 않도록 하단 중앙에 배치 */
   .btn-grp {
     position: absolute;
-    right: 4vw;
-    top: 50%;
-    translate: 0 -50%;
+    left: 50%;
+    right: auto;
+    top: auto;
+    bottom: 6vh;
+    translate: -50% 0;
+    flex-direction: row;
+    gap: 30px;
   }
- 
+
+  .btn-grp button {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
+
   /* ── ABOUT US 파트 ── */
- 
+
   /* 섹션 전체: flex 세로 배치 (타이틀 → 동그라미 → 설명글 순서) */
   .aboutus-part {
     display: flex;
@@ -85,8 +118,9 @@
     justify-content: flex-start;
     padding-top: 0;
     overflow: visible;
+    background-position: center;
   }
- 
+
   /* 타이틀("About us") */
   .aboutus-part .tit {
     position: relative;
@@ -99,47 +133,45 @@
     order: 0;
     font-size: 5rem;
   }
- 
-  /* 동그라미 박스 컨테이너: 모바일 비율에 맞게 크기 조정, 중앙 배치 */
+
+  /* 동그라미 박스 컨테이너: 겹치지 않도록 크기/간격 재조정 */
   .aboutus-part .icon-box {
     position: relative;
     top: auto;
     right: auto;
     translate: none;
-    width: 22vw;        /* 화면 비율에 맞게 vw 단위로 */
-    height: 22vw;
-    margin: 8vw auto 12vw;  /* 위아래 여백도 비율로 */
+    width: 34vw;        /* 원 크기를 늘려서 글자가 잘 보이게 */
+    height: 34vw;
+    margin: 14vw auto 20vw;  /* 이동 거리에 맞춰 여백도 확대 */
     flex-shrink: 0;
     order: 1;
   }
- 
+
   /* 각 동그라미 li */
   .aboutus-part .icon-box li {
     top: -8px;
     width: 100%;
     height: 100%;
   }
- 
+
   /* 동그라미 글자 크기 */
   .aboutus-part .icon-box li h4 {
-    font-size: 2rem;
+    font-size: 3.2vw;
   }
- 
-  /* 동그라미 4개 간격:
-     박스가 22vw이므로 간격도 vw 비례로 설정
-     PC 원본: 박스 165px, 간격 24vmin → 모바일: 박스 22vw, 간격 비례 조정 */
+
+  /* 동그라미 4개 간격: 원끼리 겹치지 않도록 이동거리를 원 크기 대비 충분히 확보
+     (대각선 인접 원 사이 거리 = translate * √2 ≥ 원 크기가 되도록 계산) */
   .aboutus-part .icon-box li:nth-child(1) {
-    translate: 0 -12vw;
+    translate: 0 -24vw;
   }
   .aboutus-part .icon-box li:nth-child(2) {
-    translate: 11vw 0;
+    translate: 24vw 0;
   }
   .aboutus-part .icon-box li:nth-child(3) {
-    translate: 0 12vw;
+    translate: 0 24vw;
   }
   .aboutus-part .icon-box li:nth-child(4) {
-    translate: -11vw 0;
+    translate: -24vw 0;
   }
 }
 /* ===== 모바일(768px 이하) 전용 종료 ===== */
- 
