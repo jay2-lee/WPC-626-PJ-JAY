@@ -73,11 +73,11 @@
 
   /* ── PRODUCT 파트 ── */
 
-  /* 아이콘 박스: 화면 정중앙 배치, 크기 모바일 비율에 맞게 (버튼 배치 공간 확보) */
+  /* 아이콘 박스: 버튼과 합쳐진 전체 그룹이 화면 정중앙(살짝 아래)에 오도록 위치 보정 */
   .product-part .icon-box {
-    left: 50%;
+    left: 39%;
     right: auto;
-    top: 50%;
+    top: 56%;
     translate: -50% -50%;
     width: 26vw;       /* 버튼이 옆에 들어갈 수 있도록 축소 */
     aspect-ratio: 1.2;
@@ -98,12 +98,12 @@
     font-size: 3.8vw;
   }
 
-  /* 위아래 버튼: PC와 동일하게 아이콘 박스 오른쪽, 세로 중앙 배치 */
+  /* 위아래 버튼: 아이콘 박스와 한 그룹으로 보이도록 위치/높이 맞춤 */
   .btn-grp {
     position: absolute;
     left: auto;
-    right: 5vw;
-    top: 50%;
+    right: 16vw;
+    top: 56%;
     bottom: auto;
     translate: 0 -50%;
     flex-direction: column;
@@ -143,15 +143,15 @@
     font-size: 5rem;
   }
 
-  /* 동그라미 박스 컨테이너: 겹치지 않도록 크기/간격 재조정 */
+  /* 동그라미 박스 컨테이너: 크기 축소 + 겹치지 않도록 간격 재조정 */
   .aboutus-part .icon-box {
     position: relative;
     top: auto;
     right: auto;
     translate: none;
-    width: 32vw;        /* 원 크기를 늘려서 글자가 잘 보이게 */
-    height: 32vw;
-    margin: 30vw auto 36vw;  /* 겹침/잘림 방지를 위해 여백 확대 */
+    width: 24vw;        /* 크기를 줄여서 전체적으로 더 아담하게 */
+    height: 24vw;
+    margin: 22vw auto 27vw;  /* 크기에 맞춰 여백도 비례 축소 */
     flex-shrink: 0;
     order: 1;
   }
@@ -165,22 +165,22 @@
 
   /* 동그라미 글자 크기 */
   .aboutus-part .icon-box li h4 {
-    font-size: 3.2vw;
+    font-size: 2.4vw;
   }
 
   /* 동그라미 4개 간격: 원끼리 겹치지 않도록 이동거리를 원 크기 대비 충분히 확보
      (대각선 인접 원 사이 거리 = translate * √2 ≥ 원 크기가 되도록 계산) */
   .aboutus-part .icon-box li:nth-child(1) {
-    translate: 0 -27vw;
+    translate: 0 -20vw;
   }
   .aboutus-part .icon-box li:nth-child(2) {
-    translate: 27vw 0;
+    translate: 20vw 0;
   }
   .aboutus-part .icon-box li:nth-child(3) {
-    translate: 0 27vw;
+    translate: 0 20vw;
   }
   .aboutus-part .icon-box li:nth-child(4) {
-    translate: -27vw 0;
+    translate: -20vw 0;
   }
 }
 /* ===== 모바일(768px 이하) 전용 종료 ===== */
