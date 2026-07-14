@@ -74,9 +74,9 @@
   .product-part .icon-box {
     left: 50%;
     right: auto;
-    top: 45%;
+    top: 50%;
     translate: -50% -50%;
-    width: 45vw;       /* 모바일 화면 비율에 맞게 축소 */
+    width: 48vw;       /* 모바일 화면 비율에 맞게 축소 */
     aspect-ratio: 1.2;
   }
 
@@ -96,7 +96,7 @@
     left: 50%;
     right: auto;
     top: auto;
-    bottom: 6vh;
+    bottom: 4vh;
     translate: -50% 0;
     flex-direction: row;
     gap: 30px;
@@ -106,6 +106,7 @@
     width: 50px;
     height: 50px;
     font-size: 20px;
+    background-color: rgba(255, 255, 255, 0.6);
   }
 
   /* ── ABOUT US 파트 ── */
@@ -140,9 +141,9 @@
     top: auto;
     right: auto;
     translate: none;
-    width: 34vw;        /* 원 크기를 늘려서 글자가 잘 보이게 */
-    height: 34vw;
-    margin: 14vw auto 20vw;  /* 이동 거리에 맞춰 여백도 확대 */
+    width: 32vw;        /* 원 크기를 늘려서 글자가 잘 보이게 */
+    height: 32vw;
+    margin: 30vw auto 36vw;  /* 겹침/잘림 방지를 위해 여백 확대 */
     flex-shrink: 0;
     order: 1;
   }
@@ -162,16 +163,16 @@
   /* 동그라미 4개 간격: 원끼리 겹치지 않도록 이동거리를 원 크기 대비 충분히 확보
      (대각선 인접 원 사이 거리 = translate * √2 ≥ 원 크기가 되도록 계산) */
   .aboutus-part .icon-box li:nth-child(1) {
-    translate: 0 -24vw;
+    translate: 0 -27vw;
   }
   .aboutus-part .icon-box li:nth-child(2) {
-    translate: 24vw 0;
+    translate: 27vw 0;
   }
   .aboutus-part .icon-box li:nth-child(3) {
-    translate: 0 24vw;
+    translate: 0 27vw;
   }
   .aboutus-part .icon-box li:nth-child(4) {
-    translate: -24vw 0;
+    translate: -27vw 0;
   }
 }
 /* ===== 모바일(768px 이하) 전용 종료 ===== */
