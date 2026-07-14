@@ -73,32 +73,27 @@
 
   /* ── PRODUCT 파트 ── */
 
-  /* 아이콘 박스: 버튼과 합쳐진 전체 그룹이 화면 정중앙(살짝 아래)에 오도록 위치 보정 */
   .product-part .icon-box {
     left: 39%;
     right: auto;
     top: 56%;
     translate: -50% -50%;
-    width: 26vw;       /* 버튼이 옆에 들어갈 수 있도록 축소 */
+    width: 26vw;
     aspect-ratio: 1.2;
   }
 
-  /* 중앙 카드가 컨테이너 정중앙에 오도록 오프셋 제거 */
   .product-part .icon-box li:nth-child(3) {
     left: 50%;
   }
 
-  /* 아이콘 타이틀 h2 (위쪽 글씨): 박스 축소에 맞춰 폰트도 축소 */
   .product-part .icon-box li h2 {
     font-size: 3vw;
   }
 
-  /* 아이콘 설명 h3 (아래쪽 글씨): 박스 축소에 맞춰 폰트도 축소 */
   .product-part .icon-box li h3 {
     font-size: 3.8vw;
   }
 
-  /* 위아래 버튼: 아이콘 박스와 한 그룹으로 보이도록 위치/높이 맞춤 */
   .btn-grp {
     position: absolute;
     left: auto;
@@ -119,18 +114,16 @@
 
   /* ── ABOUT US 파트 ── */
 
-  /* 섹션 전체: flex 세로 배치 (타이틀 → 동그라미 → 설명글 순서) */
   .aboutus-part {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    padding-top: 0;
-    overflow: visible;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    padding-top: 40vh !important;
+    overflow: visible !important;
     background-position: center;
   }
 
-  /* 타이틀("About us") */
   .aboutus-part .tit {
     position: relative;
     translate: none;
@@ -143,33 +136,28 @@
     font-size: 5rem;
   }
 
-  /* 동그라미 박스 컨테이너: 크기 축소 + 겹치지 않도록 간격 재조정 */
   .aboutus-part .icon-box {
     position: relative;
     top: auto;
     right: auto;
     translate: none;
-    width: 24vw;        /* 크기를 줄여서 전체적으로 더 아담하게 */
+    width: 24vw;
     height: 24vw;
-    margin: 22vw auto 27vw;  /* 크기에 맞춰 여백도 비례 축소 */
+    margin: 22vw auto 27vw;
     flex-shrink: 0;
     order: 1;
   }
 
-  /* 각 동그라미 li */
   .aboutus-part .icon-box li {
     top: -8px;
     width: 100%;
     height: 100%;
   }
 
-  /* 동그라미 글자 크기 */
   .aboutus-part .icon-box li h4 {
     font-size: 2.4vw;
   }
 
-  /* 동그라미 4개 간격: 원끼리 겹치지 않도록 이동거리를 원 크기 대비 충분히 확보
-     (대각선 인접 원 사이 거리 = translate * √2 ≥ 원 크기가 되도록 계산) */
   .aboutus-part .icon-box li:nth-child(1) {
     translate: 0 -20vw;
   }
